@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import Onboarding from "./pages/Onboarding";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
@@ -32,6 +32,8 @@ import { AppSidebar } from "@/components/AppSidebar";
 const queryClient = new QueryClient();
 
 const App = () => {
+  const location = useLocation();
+  const isChatRoute = location.pathname === "/chat";
   const [isOnboarded, setIsOnboarded] = useState(false);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
@@ -124,9 +126,9 @@ const App = () => {
       <Toaster />
       <Sonner />
       <SidebarProvider>
-        <div className="flex min-h-screen w-full">
+        <div className={`flex w-full ${isChatRoute ? "h-[100dvh] overflow-hidden" : "min-h-screen"}`}>
           {isAuthenticated && isOnboarded && <AppSidebar />}
-          <main className="flex-1 min-w-0 overflow-x-hidden">
+          <main className={`flex-1 min-w-0 ${isChatRoute ? "h-full min-h-0 overflow-hidden" : "overflow-x-hidden"}`}>
             <Routes>
               {/* Public routes */}
               <Route path="/login" element={<Login />} />

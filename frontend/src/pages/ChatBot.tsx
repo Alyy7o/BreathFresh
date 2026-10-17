@@ -199,7 +199,7 @@ const ChatBot = () => {
   };
 
   return (
-    <div className="flex h-[100dvh] flex-col overflow-hidden bg-gradient-hero">
+    <div className="flex h-full max-h-[100dvh] flex-col overflow-hidden bg-gradient-hero">
       <div className="shrink-0">
         <DashboardHeader dayNumber={1} />
 
