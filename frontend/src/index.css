@@ -8,89 +8,113 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
+    /* BreathFresh — Option C: Calm Dawn */
     --background: 0 0% 100%;
-    --foreground: 222.2 47.4% 11.2%;
+    --foreground: 201 90% 16%; /* Deep calm blue #0C4A6E */
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 47.4% 11.2%;
+    --card-foreground: 201 90% 16%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 47.4% 11.2%;
+    --popover-foreground: 201 90% 16%;
 
-    /* Vibrant color palette for smoking cessation app */
-    --primary: 174 62% 47%; /* Teal - Achievement */
+    --primary: 201 96% 40%; /* Calm blue #0284C7 */
     --primary-foreground: 0 0% 100%;
-    
-    --secondary: 4 84% 60%; /* Coral/Red - Motivation */
-    --secondary-foreground: 0 0% 100%;
 
-    --accent: 217 91% 60%; /* Blue - Calm */
-    --accent-foreground: 0 0% 100%;
-    
-    --success: 174 62% 47%; /* Teal - Success states */
+    --secondary: 168 76% 50%; /* Soft teal #2DD4BF */
+    --secondary-foreground: 201 90% 16%;
+
+    --accent: 186 78% 69%; /* Soft cyan #67E8F9 */
+    --accent-foreground: 201 90% 16%;
+
+    --success: 168 60% 40%;
     --success-foreground: 0 0% 100%;
-    
-    --warning: 38 92% 50%; /* Orange - Warning */
+
+    --warning: 38 92% 50%; /* Amber for cravings/alerts */
     --warning-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Warm CTA used sparingly via secondary button / emphasis */
+    --warm: 350 95% 71%; /* #FB7185 */
 
-    --destructive: 0 84.2% 60.2%;
+    --muted: 204 100% 97%; /* #F0F9FF tint */
+    --muted-foreground: 201 25% 40%;
+
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 174 62% 47%;
+    --border: 204 40% 90%;
+    --input: 204 40% 90%;
+    --ring: 201 96% 40%;
 
     --radius: 1rem;
-    
-    /* Gradients - Red/Pink and Green theme */
-    --gradient-primary: linear-gradient(135deg, hsl(174 62% 47%), hsl(142 71% 45%));
-    --gradient-secondary: linear-gradient(135deg, hsl(4 84% 60%), hsl(338 84% 60%));
-    --gradient-success: linear-gradient(135deg, hsl(174 62% 47%), hsl(142 71% 45%));
-    --gradient-hero: linear-gradient(180deg, hsl(174 62% 97%), hsl(0 0% 100%));
-    --gradient-button: linear-gradient(135deg, hsl(174 62% 47%), hsl(142 71% 45%));
-    --gradient-button-secondary: linear-gradient(135deg, hsl(4 84% 60%), hsl(338 84% 60%));
-    
-    /* Shadows */
-    --shadow-sm: 0 2px 8px hsl(174 62% 47% / 0.1);
-    --shadow-md: 0 4px 16px hsl(174 62% 47% / 0.15);
-    --shadow-lg: 0 8px 32px hsl(174 62% 47% / 0.2);
-    --shadow-glow: 0 0 40px hsl(174 62% 47% / 0.3);
+
+    /* Solid fills (gradients flattened for a cleaner look) */
+    --gradient-primary: hsl(201 96% 40%);
+    --gradient-secondary: hsl(168 76% 42%);
+    --gradient-success: hsl(168 60% 40%);
+    --gradient-hero: linear-gradient(180deg, hsl(204 100% 97%), hsl(0 0% 100%)); /* soft page wash only */
+    --gradient-button: hsl(201 96% 40%);
+    --gradient-button-secondary: hsl(168 76% 42%);
+
+    --shadow-sm: 0 2px 8px hsl(201 96% 40% / 0.1);
+    --shadow-md: 0 4px 16px hsl(201 96% 40% / 0.14);
+    --shadow-lg: 0 8px 32px hsl(201 96% 40% / 0.18);
+    --shadow-glow: 0 0 40px hsl(201 96% 40% / 0.28);
+
+    /* Sidebar — light panel with readable dark text */
+    --sidebar-background: 210 20% 98%;
+    --sidebar-foreground: 215 25% 27%;
+    --sidebar-primary: 201 96% 40%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 201 96% 40%; /* active item solid primary */
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 214 20% 90%;
+    --sidebar-ring: 201 96% 40%;
   }
 
   .dark {
-    --background: 222.2 47.4% 11.2%;
-    --foreground: 210 40% 98%;
+    --background: 201 50% 8%;
+    --foreground: 204 100% 97%;
 
-    --card: 217.2 32.6% 17.5%;
-    --card-foreground: 210 40% 98%;
+    --card: 201 40% 12%;
+    --card-foreground: 204 100% 97%;
 
-    --popover: 217.2 32.6% 17.5%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 201 40% 12%;
+    --popover-foreground: 204 100% 97%;
 
-    --primary: 174 62% 47%;
+    --primary: 201 90% 50%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 4 84% 60%;
+    --secondary: 168 65% 45%;
     --secondary-foreground: 0 0% 100%;
 
-    --accent: 217 91% 60%;
-    --accent-foreground: 0 0% 100%;
-    
-    --success: 174 62% 47%;
+    --accent: 186 70% 55%;
+    --accent-foreground: 201 50% 10%;
+
+    --success: 168 55% 42%;
     --success-foreground: 0 0% 100%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
 
-    --destructive: 0 62.8% 30.6%;
+    --muted: 201 35% 16%;
+    --muted-foreground: 204 30% 70%;
+
+    --destructive: 0 63% 35%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 27.5%;
-    --input: 217.2 32.6% 27.5%;
-    --ring: 174 62% 47%;
+    --border: 201 30% 22%;
+    --input: 201 30% 22%;
+    --ring: 201 90% 50%;
+
+    --sidebar-background: 201 40% 12%;
+    --sidebar-foreground: 210 40% 96%;
+    --sidebar-primary: 201 90% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 201 90% 50%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 201 30% 22%;
+    --sidebar-ring: 201 90% 50%;
   }
 }
 

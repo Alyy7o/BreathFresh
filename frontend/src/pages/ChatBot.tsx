@@ -213,7 +213,7 @@ const ChatBot = () => {
               <div className={`absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 rounded-full border-2 border-white ${isOnline ? 'bg-green-400' : 'bg-red-400'}`} />
             </div>
             <div>
-              <h1 className="text-base sm:text-lg font-bold text-slate-900 leading-tight">QuitGuard AI</h1>
+              <h1 className="text-base sm:text-lg font-bold text-slate-900 leading-tight">BreathFresh AI</h1>
               <p className="text-[11px] sm:text-xs text-slate-500">
                 {isOnline ? 'Online • Ready to help' : 'Offline • Limited support'}
               </p>

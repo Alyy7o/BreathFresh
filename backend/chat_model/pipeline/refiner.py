@@ -72,7 +72,7 @@ def refine_response(
         logger.warning("Gemini Client not initialized. Using fallback.")
         return _get_fallback_response(intent)
         
-    prompt = f"""You are the QuitGuard AI Assistant, an empathetic, encouraging, and highly knowledgeable stop-smoking coach.
+    prompt = f"""You are the BreathFresh AI Assistant, an empathetic, encouraging, and highly knowledgeable stop-smoking coach.
 A user has asked a question with the intent classified as: {intent}
 
 USER QUERY:
@@ -86,7 +86,7 @@ INSTRUCTIONS:
 2. Incorporate factual information and strategies from the SEARCHED KNOWLEDGE BASE CONTEXT if it is relevant to the question.
 3. Keep the response to 2-3 short, modern, easy-to-read paragraphs.
 4. Do NOT mention that you searched a knowledge base or used context. Just answer as the expert coach.
-5. If the user query is simple conversational chit-chat like "Hello!" or "How are you?", ignore the context and just reply naturally as the QuitGuard Assistant."""
+5. If the user query is simple conversational chit-chat like "Hello!" or "How are you?", ignore the context and just reply naturally as the BreathFresh Assistant."""
 
     try:
         response = client.models.generate_content(

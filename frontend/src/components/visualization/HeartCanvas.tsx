@@ -125,7 +125,7 @@ export function HeartCanvas({ recoveryDays, isSmoker = false, smokingIntensity =
 
         // Try realistic model first, fallback to heart.glb
         const modelPaths = [
-            "/models/realistic_human_heart (1).glb",
+            "/models/realistic_human_heart%20(1).glb",
             "/models/heart.glb",
         ];
 

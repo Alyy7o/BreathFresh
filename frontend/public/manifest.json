@@ -1,12 +1,12 @@
 {
-  "name": "Quit Guard",
-  "short_name": "Quit Guard",
+  "name": "BreathFresh",
+  "short_name": "BreathFresh",
   "description": "Track your smoke-free journey, monitor health improvements, and get AI-powered support",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#2cc5bd",
+  "background_color": "#F0F9FF",
+  "theme_color": "#0284C7",
   "orientation": "portrait",
   "categories": ["health", "lifestyle"],
   "icons": [

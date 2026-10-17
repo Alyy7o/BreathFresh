@@ -383,15 +383,15 @@ const QuitPlan = () => {
           /* ─── Empty State ─── */
           <div className="flex flex-col items-center justify-center min-h-[55vh] sm:min-h-[70vh] animate-fade-in px-2 w-full">
             <div className="relative mb-8">
-              <div className="w-28 h-28 rounded-full bg-gradient-primary flex items-center justify-center shadow-lg">
+              <div className="w-28 h-28 rounded-full bg-primary flex items-center justify-center shadow-lg">
                 <Brain className="w-14 h-14 text-white" />
               </div>
-              <div className="absolute -bottom-1 -right-1 w-10 h-10 rounded-full bg-gradient-secondary flex items-center justify-center shadow-md">
+              <div className="absolute -bottom-1 -right-1 w-10 h-10 rounded-full bg-secondary flex items-center justify-center shadow-md">
                 <Sparkles className="w-5 h-5 text-white" />
               </div>
             </div>
             
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-center mb-3 bg-gradient-to-r from-[hsl(174,62%,47%)] to-[hsl(142,71%,45%)] bg-clip-text text-transparent">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-center mb-3 text-primary">
               Ready for a Strategic Quit?
             </h2>
             <p className="text-muted-foreground text-center max-w-sm mb-8 leading-relaxed px-4">
@@ -402,7 +402,7 @@ const QuitPlan = () => {
               size="lg" 
               onClick={generateNewPlan} 
               disabled={generating}
-              className="w-full max-w-xs sm:max-w-none sm:w-auto bg-gradient-primary hover:opacity-90 shadow-lg px-6 sm:px-8 py-5 sm:py-6 h-auto text-sm sm:text-lg rounded-2xl transition-all active:scale-95"
+              className="w-full max-w-xs sm:max-w-none sm:w-auto bg-primary hover:bg-primary/90 shadow-lg px-6 sm:px-8 py-5 sm:py-6 h-auto text-sm sm:text-lg rounded-2xl transition-all active:scale-95"
             >
               {generating ? (
                 <>
@@ -427,7 +427,7 @@ const QuitPlan = () => {
           <div className="space-y-4 sm:space-y-5 animate-fade-in overflow-x-hidden max-w-full">
             {/* ─── Motivational Message + Risk Banner ─── */}
             <Card className="overflow-hidden max-w-full border-0 shadow-lg">
-              <div className="bg-gradient-primary p-4 sm:p-5">
+              <div className="bg-primary p-4 sm:p-5">
                 <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:gap-4">
                   <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-white/20 flex items-center justify-center flex-shrink-0 backdrop-blur-sm">
                     <Sparkles className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
@@ -456,7 +456,7 @@ const QuitPlan = () => {
               <Card className="overflow-hidden border-0 shadow-lg border-l-4 border-l-secondary animate-fade-in">
                 <CardContent className="p-4 sm:p-5">
                   <div className="flex flex-col sm:flex-row sm:items-start gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-gradient-secondary flex items-center justify-center flex-shrink-0">
+                    <div className="w-10 h-10 rounded-xl bg-secondary flex items-center justify-center flex-shrink-0">
                       <CheckCircle2 className="w-5 h-5 text-white" />
                     </div>
                     <div className="flex-1 min-w-0">
@@ -471,7 +471,7 @@ const QuitPlan = () => {
                       <Button 
                         onClick={generateNewPlan} 
                         disabled={generating}
-                        className="w-full sm:w-auto bg-gradient-secondary hover:opacity-90 text-white rounded-xl h-10 sm:h-9 px-4 text-sm"
+                        className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-white rounded-xl h-10 sm:h-9 px-4 text-sm"
                       >
                         {generating ? (
                           <><RefreshCw className="mr-2 h-3.5 w-3.5 animate-spin" /> Generating Week {weekNumber}...</>
@@ -498,7 +498,7 @@ const QuitPlan = () => {
                       onClick={() => setActiveDayIdx(idx)}
                       className={`flex-1 py-1.5 rounded-lg text-center transition-all ${
                         isActive
-                          ? 'bg-gradient-primary text-white shadow-md scale-105'
+                          ? 'bg-primary text-white shadow-md scale-105'
                           : isPast
                             ? 'bg-primary/15 text-primary'
                             : 'bg-slate-100 text-slate-500 hover:bg-slate-200'
@@ -535,7 +535,7 @@ const QuitPlan = () => {
                     onClick={() => setActiveDayIdx(idx)}
                     className={`snap-center flex-shrink-0 min-w-[5rem] w-[5rem] sm:min-w-0 sm:w-auto sm:flex-1 p-2.5 sm:p-3 rounded-xl text-center border transition-all duration-200 touch-manipulation ${
                       activeDayIdx === idx 
-                        ? "bg-gradient-primary border-transparent text-white shadow-md sm:scale-[1.02]" 
+                        ? "bg-primary border-transparent text-white shadow-md sm:scale-[1.02]" 
                         : "bg-white border-border hover:border-primary/40"
                     }`}
                   >
@@ -562,7 +562,7 @@ const QuitPlan = () => {
             {activeDay && (
               <Card className="overflow-hidden border-0 shadow-xl">
                 {/* Day Header */}
-                <CardHeader className="bg-gradient-to-br from-slate-900 to-slate-800 text-white p-4 sm:p-6">
+                <CardHeader className="bg-slate-900 text-white p-4 sm:p-6">
                   <div className="flex flex-col gap-4 sm:flex-row sm:justify-between sm:items-center">
                     <div className="min-w-0">
                       <p className="text-[10px] uppercase tracking-[0.2em] text-white/50 font-bold mb-1">Current Focus</p>
@@ -631,7 +631,7 @@ const QuitPlan = () => {
                       {(activeDay?.interventions ?? []).map((item, i) => (
                         <div key={i} className="p-3.5 bg-muted/40 rounded-xl overflow-hidden hover:bg-primary/5 transition-colors border border-transparent hover:border-primary/10">
                           <div className="flex items-start gap-3">
-                            <div className="w-6 h-6 rounded-full bg-gradient-primary flex-shrink-0 flex items-center justify-center mt-0.5">
+                            <div className="w-6 h-6 rounded-full bg-primary flex-shrink-0 flex items-center justify-center mt-0.5">
                               <span className="text-[10px] font-bold text-white">{i + 1}</span>
                             </div>
                             <div className="flex-1 min-w-0">
@@ -657,7 +657,7 @@ const QuitPlan = () => {
             {/* ─── Stats Grid ─── */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
               {/* Financial */}
-              <Card className="bg-gradient-success text-white border-0 shadow-lg min-w-0">
+              <Card className="bg-success text-white border-0 shadow-lg min-w-0">
                 <CardContent className="p-2.5 sm:p-4 text-center min-w-0">
                   <Banknote className="w-4 h-4 sm:w-5 sm:h-5 mx-auto mb-1 opacity-80" />
                   <p className="text-base sm:text-xl font-black break-words">PKR {plan?.financial_milestone?.savings_pkr?.toFixed(0) ?? "—"}</p>
@@ -669,7 +669,7 @@ const QuitPlan = () => {
               </Card>
 
               {/* Reduction */}
-              <Card className="bg-gradient-secondary text-white border-0 shadow-lg min-w-0">
+              <Card className="bg-secondary text-white border-0 shadow-lg min-w-0">
                 <CardContent className="p-2.5 sm:p-4 text-center min-w-0">
                   <ArrowDown className="w-4 h-4 sm:w-5 sm:h-5 mx-auto mb-1 opacity-80" />
                   <p className="text-base sm:text-xl font-black">{totalReduction > 0 ? `-${totalReduction}` : "0"}</p>

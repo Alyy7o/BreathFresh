@@ -36,7 +36,7 @@ class ChatMessageResponse(BaseModel):
  
 
 
-app = FastAPI(title="QuitGuard Chat API", version="1.0.0")
+app = FastAPI(title="BreathFresh Chat API", version="1.0.0")
 
 # Enable permissive CORS for development; tighten in production
 app.add_middleware(

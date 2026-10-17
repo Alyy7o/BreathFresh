@@ -1,6 +1,6 @@
-# QuitGuard – Project Setup Guide
+# BreathFresh – Project Setup Guide
 
-Comprehensive instructions to set up and run the QuitGuard project, including backend (chat model), frontend (PWA), and database (Supabase).
+Comprehensive instructions to set up and run the BreathFresh project, including backend (chat model), frontend (PWA), and database (Supabase).
 
 ## Overview
 - Backend: Python 3.11.0 RAG chatbot with PDF ingestion and an intent classifier.
@@ -127,7 +127,7 @@ Option B — Local Supabase (CLI):
 
 ## Project Structure
 ```
-QuitGuard/
+BreathFresh/
 ├── backend/chat_model/         # Python backend (RAG + classifier)
 │   ├── pipeline/               # Ingest, utils, classifier, chatbot
 │   ├── data/                   # Place PDFs here (ignored)
@@ -148,6 +148,6 @@ QuitGuard/
 
 
 
-cd 'd:\FYP\QG\QuitGuard\backend\chat_model'
+cd 'd:\FYP\QG\BreathFresh\backend\chat_model'
 
  .\.venv_311\Scripts\activate.ps1; uvicorn server:app --reload --host 0.0.0.0 --port 8000

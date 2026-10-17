@@ -1,5 +1,5 @@
 """
-QuitGuard — 7-Day Quit Plan Generator API (GGUF / CPU)
+BreathFresh — 7-Day Quit Plan Generator API (GGUF / CPU)
 
 Runs on HuggingFace Spaces FREE CPU tier (16GB RAM).
 Uses llama-cpp-python to load the GGUF quantized model.
@@ -144,7 +144,7 @@ demo = gr.Interface(
         value=example_input,
     ),
     outputs=gr.Textbox(label="Generated Plan (JSON)", lines=20),
-    title="QuitGuard — 7-Day Quit Plan Generator",
+    title="BreathFresh — 7-Day Quit Plan Generator",
     description=(
         "Paste a user's smoking profile in JSON format. "
         "The fine-tuned LLaMA 3.1 8B model will generate a personalized 7-day quit plan. "

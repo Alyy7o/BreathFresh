@@ -5,8 +5,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
-import { Heart, Mail, Lock, User } from "lucide-react";
+import { Mail, Lock, User } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
+import appLogo from "@/assets/app-logo.png";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -68,8 +69,12 @@ const Register = () => {
     <div className="min-h-screen bg-gradient-hero flex items-center justify-center p-4 sm:p-6">
       <div className="w-full max-w-md sm:max-w-lg animate-fade-in-up">
         <div className="text-center mb-8 sm:mb-10">
-          <div className="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-primary mb-4 shadow-glow animate-pulse-slow">
-            <Heart className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
+          <div className="inline-flex items-center justify-center mb-4">
+            <img
+              src={appLogo}
+              alt="BreathFresh Logo"
+              className="w-20 h-20 sm:w-24 sm:h-24 object-contain"
+            />
           </div>
           <h1 className="text-3xl sm:text-4xl font-bold mb-2">Start Your Journey</h1>
           <p className="text-muted-foreground text-sm sm:text-base">Create an account to begin recovery</p>

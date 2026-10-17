@@ -109,7 +109,9 @@ export function LungCanvas({ recoveryDays, isSmoker = false, smokingIntensity = 
         rim.position.set(0, 4, -5);
         scene.add(rim);
 
-        scene.add(new THREE.PointLight(0xff7060, 0.8, 12).position.set(0, 1, 3) && new THREE.PointLight(0xff7060, 0.8, 12));
+        const point = new THREE.PointLight(0xff7060, 0.8, 12);
+        point.position.set(0, 1, 3);
+        scene.add(point);
 
         // ── Load GLB model ────────────────────────────────────────────────────
         const loader = new GLTFLoader();
@@ -118,7 +120,7 @@ export function LungCanvas({ recoveryDays, isSmoker = false, smokingIntensity = 
 
         // Try the "realistic" file first, fall back to "lung.glb"
         const modelPaths = [
-            "/models/realistic_human_lungs (1).glb",
+            "/models/realistic_human_lungs%20(1).glb",
             "/models/lung.glb",
         ];
 

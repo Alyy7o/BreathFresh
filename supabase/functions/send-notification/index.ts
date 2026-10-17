@@ -8,7 +8,7 @@
 
 // if (vapidPublicKey && vapidPrivateKey) {
 //     webpush.setVapidDetails(
-//         'mailto:support@quitguard.app',
+//         'mailto:support@breathfresh.app',
 //         vapidPublicKey,
 //         vapidPrivateKey
 //     )

@@ -331,7 +331,7 @@ const ProgressTracking = () => {
     <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Quit-Guard Progress Report</title>
+      <title>BreathFresh Progress Report</title>
       <style>
         :root {
           --bg: #0f172a;
@@ -373,7 +373,7 @@ const ProgressTracking = () => {
       <div class="container">
         <div class="header">
           <div>
-            <div class="title">Quit-Guard Progress Report</div>
+            <div class="title">BreathFresh Progress Report</div>
             <div class="sub">Exported at ${dateStr}</div>
           </div>
           <div class="sub">User: ${profile?.full_name || profile?.email || 'Anonymous'}</div>
@@ -432,7 +432,7 @@ const ProgressTracking = () => {
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `quit-guard-progress-${new Date().toISOString().split('T')[0]}.html`;
+    a.download = `breathfresh-progress-${new Date().toISOString().split('T')[0]}.html`;
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
@@ -487,7 +487,7 @@ const ProgressTracking = () => {
     <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Quit-Guard Progress Report</title>
+      <title>BreathFresh Progress Report</title>
       <style>
         :root {
           --text: #111827;
@@ -538,7 +538,7 @@ const ProgressTracking = () => {
       <div class="container">
         <div class="header">
           <div>
-            <div class="title">Quit-Guard Progress Report</div>
+            <div class="title">BreathFresh Progress Report</div>
             <div class="sub">Exported at ${dateStr}</div>
           </div>
           <div class="sub">User: ${profile?.full_name || profile?.email || 'Anonymous'}</div>

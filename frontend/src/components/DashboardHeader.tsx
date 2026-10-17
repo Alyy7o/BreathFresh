@@ -57,16 +57,14 @@ export const DashboardHeader = ({ dayNumber }: DashboardHeaderProps) => {
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
         {/* Logo and Day Number - Responsive Layout */}
         <div className="flex items-center gap-2 sm:gap-4 min-w-0">
-          {/* Logo */}
-          <div className="flex items-center lg:gap-1 sm:gap-3 shrink-0">
+          {/* Logo + name: mobile/tablet only (hidden on PC where sidebar has brand) */}
+          <div className="flex items-center gap-2 sm:gap-3 shrink-0 lg:hidden">
             <img
               src={appLogo}
-              alt="Quit-Guard Logo"
-              className="h-10 w-10 sm:h-10 sm:w-10 lg:h-16 lg:w-16 object-contain"
+              alt="BreathFresh Logo"
+              className="h-10 w-10 object-contain"
             />
-            <div className="hidden sm:block">
-              <h1 className="text-lg sm:text-xl font-bold text-primary">Quit-Guard</h1>
-            </div>
+            <h1 className="hidden sm:block text-lg sm:text-xl font-bold text-primary">BreathFresh</h1>
           </div>
 
           {/* Day Number - More prominent on mobile */}

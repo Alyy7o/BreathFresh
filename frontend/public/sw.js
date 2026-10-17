@@ -80,7 +80,7 @@ self.addEventListener('push', function (event) {
     badge: '/favicon.ico',
     data: { url: data.url || '/' }
   };
-  event.waitUntil(self.registration.showNotification(data.title || 'QuitGuard', options));
+  event.waitUntil(self.registration.showNotification(data.title || 'BreathFresh', options));
 });
 
 self.addEventListener('notificationclick', function (event) {
