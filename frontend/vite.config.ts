@@ -10,8 +10,9 @@ export default defineConfig(({ mode }) => ({
     port: 8080,
     proxy: {
       "/api": {
-        target: "http://localhost:8000",
+        target: "https://breathfresh-production.up.railway.app",
         changeOrigin: true,
+        secure: true,
       },
     },
   },

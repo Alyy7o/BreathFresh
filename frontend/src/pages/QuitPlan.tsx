@@ -305,7 +305,8 @@ const QuitPlan = () => {
         }
       };
 
-      const response = await fetch("/api/generate-plan", {
+      const apiBase = (import.meta as any).env?.VITE_API_BASE_URL || "/api";
+      const response = await fetch(`${apiBase}/generate-plan`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload)

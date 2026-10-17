@@ -199,40 +199,42 @@ const ChatBot = () => {
   };
 
   return (
-    <div className="flex min-h-[100dvh] flex-col bg-gradient-hero">
-      <DashboardHeader dayNumber={1} />
+    <div className="flex h-[100dvh] flex-col overflow-hidden bg-gradient-hero">
+      <div className="shrink-0">
+        <DashboardHeader dayNumber={1} />
 
-      {/* ─── Chat Header ─── */}
-      <div className="border-b border-border/70 bg-white/80 px-4 py-3 backdrop-blur-xl sm:py-4">
-        <div className="mx-auto flex max-w-3xl items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="relative">
-              <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-primary shadow-sm sm:h-11 sm:w-11">
-                <Sparkles className="h-5 w-5 text-white" />
+        {/* ─── Chat Header ─── */}
+        <div className="border-b border-border/70 bg-white/80 px-4 py-3 backdrop-blur-xl sm:py-4">
+          <div className="mx-auto flex max-w-3xl items-center justify-between">
+            <div className="flex items-center gap-3">
+              <div className="relative">
+                <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-primary shadow-sm sm:h-11 sm:w-11">
+                  <Sparkles className="h-5 w-5 text-white" />
+                </div>
+                <div className={`absolute -bottom-0.5 -right-0.5 h-3.5 w-3.5 rounded-full border-2 border-white ${isOnline ? "bg-green-400" : "bg-red-400"}`} />
               </div>
-              <div className={`absolute -bottom-0.5 -right-0.5 h-3.5 w-3.5 rounded-full border-2 border-white ${isOnline ? "bg-green-400" : "bg-red-400"}`} />
+              <div>
+                <h1 className="text-base font-extrabold tracking-tight text-foreground sm:text-lg">BreathFresh AI</h1>
+                <p className="text-[11px] text-muted-foreground sm:text-xs">
+                  {isOnline ? "Online • Ready to help" : "Offline • Limited support"}
+                </p>
+              </div>
             </div>
-            <div>
-              <h1 className="text-base font-extrabold tracking-tight text-foreground sm:text-lg">BreathFresh AI</h1>
-              <p className="text-[11px] text-muted-foreground sm:text-xs">
-                {isOnline ? "Online • Ready to help" : "Offline • Limited support"}
-              </p>
-            </div>
-          </div>
 
-          <div className={`flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-bold ${
-            isOnline ? 'bg-green-50 text-green-700' : 'bg-red-50 text-red-700'
-          }`}>
-            {isOnline ? <Wifi className="w-3 h-3" /> : <WifiOff className="w-3 h-3" />}
-            {isOnline ? 'Online' : 'Offline'}
+            <div className={`flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-bold ${
+              isOnline ? "bg-green-50 text-green-700" : "bg-red-50 text-red-700"
+            }`}>
+              {isOnline ? <Wifi className="w-3 h-3" /> : <WifiOff className="w-3 h-3" />}
+              {isOnline ? "Online" : "Offline"}
+            </div>
           </div>
         </div>
       </div>
 
-      {/* ─── Messages Area ─── */}
+      {/* ─── Messages Area (only this scrolls) ─── */}
       <div
         ref={messagesContainerRef}
-        className="flex-1 overflow-y-auto px-3 sm:px-4 py-4 space-y-3"
+        className="min-h-0 flex-1 overflow-y-auto px-3 py-4 sm:px-4"
       >
         <div className="max-w-3xl mx-auto space-y-3">
           {isHistoryLoading ? (
@@ -335,8 +337,8 @@ const ChatBot = () => {
         </button>
       )}
 
-      {/* ─── Input Area ─── */}
-      <div className="border-t border-border/70 bg-white/90 px-3 pb-[calc(env(safe-area-inset-bottom,0px)+80px)] pt-3 backdrop-blur-xl sm:px-4">
+      {/* ─── Input Area (pinned) ─── */}
+      <div className="shrink-0 border-t border-border/70 bg-white/95 px-3 pb-[calc(env(safe-area-inset-bottom,0px)+5.5rem)] pt-3 backdrop-blur-xl sm:px-4 sm:pb-4">
         <div className="mx-auto max-w-3xl">
           <div className="flex items-end gap-2">
             <div className="relative flex-1">
@@ -360,7 +362,7 @@ const ChatBot = () => {
               size="lg"
             >
               <Send className="w-4 h-4" />
-              <span className="sr-only sm:not-sr-only sm:ml-2 font-semibold">Send</span>
+              <span className="sr-only font-semibold sm:not-sr-only sm:ml-2">Send</span>
             </Button>
           </div>
         </div>
