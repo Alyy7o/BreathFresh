@@ -1,153 +1,226 @@
-# BreathFresh – Project Setup Guide
+# BreathFresh
 
-Comprehensive instructions to set up and run the BreathFresh project, including backend (chat model), frontend (PWA), and database (Supabase).
+**AI-powered smoking cessation companion** — track cravings, follow a personalized quit plan, visualize organ recovery, and get firm, supportive coaching when urges hit.
 
-## Overview
-- Backend: Python 3.11.0 RAG chatbot with PDF ingestion and an intent classifier.
-- Frontend: Vite + React PWA, integrates with Supabase for user data.
-- Database: Supabase project and migrations under `frontend/supabase/`.
+Built for demo / competition evaluation. Clone, sign in with the demo account, or use the live links below.
 
-## Prerequisites
-- Windows, macOS, or Linux.
-- Python `3.11.0` (Windows: `py -3.11.0 --version`).
-- Node.js `>= 18` and npm.
-- Supabase account and CLI (`npm i -g supabase`), optional for local dev.
+---
 
-## Backend Setup (Python 3.11.0)
-1. Navigate to backend directory:
-   - `cd backend/chat_model`
-2. Create and activate a virtual environment (Windows PowerShell):
-   - Create: `py -3.11.0 -m venv .venv`
-   - Activate: `.\.venv\Scripts\Activate.ps1`
-3. Install dependencies:
-   - `python -m pip install -r requirements.txt`
-   - If torch fails on Windows, install CPU wheel:
-     - `python -m pip install --index-url https://download.pytorch.org/whl/cpu torch==2.4.1`
-4. Verify imports:
-   - `python -c "import transformers, sentence_transformers, faiss, fitz, datasets, evaluate, sklearn, torch; print('IMPORTS_OK')"`
+## Live demo
 
-### Ingest PDFs (Build Vector Store)
-1. Place PDF resources into `backend/chat_model/data/`.
-2. Run ingestion (append mode by default):
-   - `python -m pipeline.ingest_data --data-dir data`
-   - Overwrite existing vector store: `python -m pipeline.ingest_data --data-dir data --overwrite`
-3. Artifacts:
-   - FAISS index: `backend/chat_model/vectors/`
-   - Keyword components: `backend/chat_model/models/`
+| Service | URL |
+|--------|-----|
+| **Web app (frontend)** | https://breathfresh.vercel.app |
+| **Chat / plan API** | https://breathfresh-production.up.railway.app/api |
+| **API health** | https://breathfresh-production.up.railway.app/api/health |
+| **Source** | https://github.com/Alyy7o/BreathFresh |
 
-### Run the Chatbot
-- Interactive menu: `python main.py`
-- Modes:
-  - Ingest PDFs, Chat, Train Intent Classifier, Test Classifier, System Status.
+> If Cloudflare Workers is also configured: `https://breathfresh.metadors.dev`
 
-### Train Intent Classifier (optional)
-- Prepare `data/training_data.csv` with columns `text,intent`.
-- Train: `python -m pipeline.intent_classifier train --data data/training_data.csv`
-- Test interactively: `python -m pipeline.intent_classifier`
+---
 
-## Frontend Setup (Vite + React PWA)
-1. Navigate to frontend:
-   - `cd frontend`
-2. Install dependencies:
-   - `npm install`
-3. Configure environment variables (create `.env.local`):
-   - `VITE_SUPABASE_URL=https://<your-project>.supabase.co`
-   - `VITE_SUPABASE_ANON_KEY=<your-anon-key>`
-4. Run dev server:
-   - `npm run dev`
-5. Build for production:
-   - `npm run build`
+## Demo login (judges / evaluators)
 
-## Database Setup (Supabase)
-Option A — Use existing hosted Supabase:
-- Create a Supabase project and copy `URL` and `anon` key.
-- Set values in `frontend/.env.local` as above.
+Use this account for a full walkthrough without registering:
 
-Option B — Local Supabase (CLI):
-1. Install CLI: `npm i -g supabase`
-2. From project root or `frontend/supabase`, start services:
-   - `supabase start`
-3. Apply migrations (if using the migrations folder):
-   - `supabase migration up`
-4. Update frontend `.env.local` to point to the local Supabase URL and key provided by the CLI.
+| Field | Value |
+|-------|--------|
+| **Email** | `demo@gmail.com` |
+| **Password** | `demo@1234` |
 
-## Environment Files & Secrets
-- Frontend:
-  - `.env.local`: project URL and anon key.
-  - Production values live in `.env.production` (do not commit secrets).
-- Backend:
-  - No secrets required for local operation unless extended to use external APIs.
+After login you can explore Dashboard, Progress, Organ Health, Quit Plan, Chat, Resources, Craving Log, and Profile.
 
-## Development Workflow
-- Backend:
-  - Edit code under `backend/chat_model/pipeline` and run `main.py` for menu-driven actions.
-  - Re-ingest PDFs when data changes.
-- Frontend:
-  - Update components under `frontend/src/`.
-  - Use `npm run dev` for hot reload.
-- Database:
-  - Maintain SQL/schema via `frontend/supabase/migrations/`.
+---
 
-## Common Issues
-- Torch DLL initialization on Windows:
-  - Install from CPU wheel index: `python -m pip install --index-url https://download.pytorch.org/whl/cpu torch==2.4.1`.
-- Tokenizer conflicts:
-  - We avoid `chromadb` and similar packages to prevent incompatible `tokenizers` pins.
-- FAISS not found:
-  - Ensure `faiss-cpu` is installed, not `faiss-gpu`.
+## What BreathFresh does
 
-## Package Versions
-- Backend (Python):
-  - `numpy` 2.3.4
-  - `pandas` 2.3.3
-  - `scikit-learn` 1.7.2
-  - `tqdm` 4.67.1
-  - `PyMuPDF` 1.26.5
-  - `langchain-text-splitters` 1.0.0
-  - `sentence-transformers` 5.1.2
-  - `transformers` 4.57.1
-  - `faiss-cpu` 1.12.0
-  - `datasets` 4.4.0
-  - `evaluate` 0.4.6
-  - `torch` 2.4.1+cpu (install via CPU wheel index)
-- Frontend (Node):
-  - `react` 18.3.1
-  - `react-dom` 18.3.1
-  - `vite` 5.4.19
-  - `typescript` 5.8.3
-  - `tailwindcss` 3.4.17
-  - `@supabase/supabase-js` 2.75.0
-  - `@tanstack/react-query` 5.83.0
+- **Quit coaching chat** — Groq-powered AI that refuses “just one cigarette” and redirects to coping actions (breathing, delay, water, gum).
+- **7-day quit plan** — personalized plan generation via the backend API.
+- **Progress & craving log** — track smoke-free days, triggers, and urge intensity.
+- **Organ health visualization** — see recovery-focused health visuals as you quit.
+- **Resources hub** — articles, YouTube videos (Watch opens the real link), and success stories.
+- **Professional consultations & alternatives** — specialists and healthier substitutions.
+- **PWA-ready UI** — installable mobile-friendly React app with bottom nav + sidebar.
+- **Admin content tools** — manage resources and specialists (admin role).
 
-## What Not to Commit (Handled by .gitignore)
-- `backend/chat_model/.venv/`, caches, logs.
-- Large artifacts: `backend/chat_model/models/`, `backend/chat_model/vectors/`.
-- Raw data: `backend/chat_model/data/` (except `training_data.csv`).
-- Frontend build outputs and local env files.
+---
 
-## Project Structure
+## Tech stack
+
+| Layer | Technology |
+|-------|------------|
+| Frontend | React 18, TypeScript, Vite, Tailwind CSS, shadcn/ui |
+| Auth & DB | Supabase (Auth, Postgres, RLS) |
+| AI chat / plans | FastAPI + **Groq** (`openai/gpt-oss-120b`) |
+| Hosting | Frontend → **Vercel**; API → **Railway** (Docker) |
+| FAQ assist | Lightweight keyword context (no heavy local models on Railway) |
+
+---
+
+## Architecture (high level)
+
+```
+Browser (Vercel SPA)
+    │
+    ├── Supabase  →  auth, profiles, progress, resources, chat history
+    │
+    └── /api/*    →  Railway FastAPI
+                        ├── POST /api/chat
+                        ├── POST /api/generate-plan
+                        └── GET  /api/health
+                              └── Groq LLM + FAQ keywords
+```
+
+---
+
+## Quick start (local)
+
+### Prerequisites
+
+- Node.js **18+**
+- Python **3.11+**
+- Supabase project (or use the existing hosted one via env vars)
+- Groq API key ([console.groq.com](https://console.groq.com))
+
+### 1. Frontend
+
+```bash
+cd frontend
+npm install
+```
+
+Create `frontend/.env` (or copy from your secrets store):
+
+```env
+VITE_SUPABASE_URL=https://<your-project>.supabase.co
+VITE_SUPABASE_PUBLISHABLE_KEY=<your-anon-key>
+VITE_API_BASE_URL=https://breathfresh-production.up.railway.app/api
+```
+
+For local API instead:
+
+```env
+VITE_API_BASE_URL=http://127.0.0.1:8000/api
+```
+
+```bash
+npm run dev
+```
+
+App: http://localhost:5173  
+Login with **`demo@gmail.com` / `demo@1234`**.
+
+### 2. Backend (optional if using Railway)
+
+```bash
+cd backend/chat_model
+python -m venv .venv
+# Windows: .\.venv\Scripts\Activate.ps1
+# macOS/Linux: source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+Create `backend/chat_model/.env`:
+
+```env
+GROQ_API_KEY=gsk_your_key_here
+GROQ_MODEL=openai/gpt-oss-120b
+```
+
+```bash
+uvicorn server:app --reload --host 0.0.0.0 --port 8000
+```
+
+Health check: http://127.0.0.1:8000/api/health
+
+---
+
+## Competition walkthrough (suggested)
+
+1. Open the **live web app** → sign in with demo credentials above.
+2. **Dashboard** — smoke-free overview and entry points.
+3. **Chat** — ask: *“should I try a cigarette?”* → expect a clear **No** + coping steps.
+4. **Quit Plan** — generate / view a structured plan.
+5. **Organ Health** — explore recovery visuals.
+6. **Resources → Videos** — tap **Watch** to open real YouTube links.
+7. **Craving Log / Progress** — log an urge and review trends.
+
+---
+
+## Environment variables
+
+### Frontend (`frontend/.env`)
+
+| Variable | Purpose |
+|----------|---------|
+| `VITE_SUPABASE_URL` | Supabase project URL |
+| `VITE_SUPABASE_PUBLISHABLE_KEY` | Supabase anon / publishable key |
+| `VITE_API_BASE_URL` | Chat API base (…`/api`) |
+
+### Backend (`backend/chat_model/.env`)
+
+| Variable | Purpose |
+|----------|---------|
+| `GROQ_API_KEY` | Groq API key (required for chat & plans) |
+| `GROQ_MODEL` | Defaults to `openai/gpt-oss-120b` |
+
+Do **not** commit real API keys. Demo email/password above are intentional for evaluators.
+
+---
+
+## Project structure
+
 ```
 BreathFresh/
-├── backend/chat_model/         # Python backend (RAG + classifier)
-│   ├── pipeline/               # Ingest, utils, classifier, chatbot
-│   ├── data/                   # Place PDFs here (ignored)
-│   ├── vectors/                # FAISS index (ignored)
-│   ├── models/                 # Keyword/model artifacts (ignored)
-│   └── requirements.txt        # Backend dependencies
-├── frontend/                   # React PWA
-│   ├── src/                    # App code
-│   ├── public/                 # Static assets
-│   └── supabase/               # Config and migrations
-└── docs/Project_Report.md      # Project documentation
+├── backend/chat_model/          # FastAPI + Groq chatbot & quit-plan API
+│   ├── pipeline/                # chatbot, groq_client, FAQ helpers, plan generator
+│   ├── server.py                # HTTP routes
+│   ├── Dockerfile               # Railway image
+│   └── requirements.txt
+├── frontend/                    # React PWA (Vercel)
+│   ├── src/pages/               # Dashboard, Chat, Progress, Resources, …
+│   ├── src/integrations/        # Supabase + chat API clients
+│   ├── supabase/migrations/     # Schema & RLS
+│   └── vercel.json              # SPA rewrites + /api proxy to Railway
+├── vercel.json                  # Root rewrites (monorepo deploy)
+└── README.md
 ```
 
-## Next Steps
-- Add PDFs to `backend/chat_model/data/` and ingest.
-- Configure frontend `.env.local` with Supabase keys.
-- Run backend `main.py` and frontend `npm run dev` side-by-side.
+---
 
+## API endpoints
 
+| Method | Path | Description |
+|--------|------|-------------|
+| `GET` | `/api/health` | Liveness + provider |
+| `GET` | `/api/status` | Chatbot status |
+| `POST` | `/api/chat` | Body: `{ "message": "..." }` |
+| `POST` | `/api/generate-plan` | Quit-plan generation |
 
-cd 'd:\FYP\QG\BreathFresh\backend\chat_model'
+Example:
 
- .\.venv_311\Scripts\activate.ps1; uvicorn server:app --reload --host 0.0.0.0 --port 8000
+```bash
+curl -X POST https://breathfresh-production.up.railway.app/api/chat ^
+  -H "Content-Type: application/json" ^
+  -d "{\"message\":\"I have a strong craving right now\"}"
+```
+
+---
+
+## Deploy notes
+
+- **Frontend:** push to `main` → Vercel builds `frontend/`. SPA fallback + `/api/*` rewrite to Railway are in `vercel.json`.
+- **Backend:** Railway Root Directory = `backend/chat_model`, Dockerfile deploy. Set `GROQ_API_KEY` and `GROQ_MODEL` in Railway variables.
+- **Supabase Auth URLs:** add production site URL(s) under Authentication → URL configuration (e.g. `https://breathfresh.vercel.app/**`).
+
+---
+
+## Team / academic context
+
+BreathFresh is a Final Year Project (FYP) focused on digital support for smoking cessation — combining behavior tracking, educational resources, and preventive AI coaching in one product experience.
+
+---
+
+## License
+
+All rights reserved for academic / competition submission unless otherwise stated by the authors.
