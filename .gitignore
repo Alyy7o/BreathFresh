@@ -25,3 +25,16 @@ dist-ssr
 
 .env
 .env.production
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pkl
+*.pickle
+.Python
+.venv/
+venv/
+backend/chat_model/models/
+backend/chat_model/vectors/
+backend/chat_model/tmp/
