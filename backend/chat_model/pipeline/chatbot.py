@@ -6,19 +6,9 @@ import re
 
 logger = logging.getLogger(__name__)
 
-# Import with proper error handling
-try:
-    from .intent_classifier import predict_intent, get_classifier
-    from .refiner import _get_fallback_response, get_refiner, refine_response, post_process_response
-    from .utils import get_vector_store
-except ImportError:
-    try:
-        from intent_classifier import predict_intent, get_classifier
-        from refiner import _get_fallback_response, get_refiner, refine_response, post_process_response
-        from utils import get_vector_store
-    except ImportError as e:
-        logger.error(f"Failed to import pipeline components: {e}")
-        raise
+from .intent_classifier import predict_intent, get_classifier
+from .refiner import _get_fallback_response, get_refiner, refine_response, post_process_response
+from .utils import get_vector_store
 
 # =============================================================================
 # RETRIEVAL CONFIGURATION

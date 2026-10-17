@@ -32,7 +32,11 @@ export async function sendChatMessage(
 ): Promise<ChatMessageResponse> {
   const res = await fetch(`${API_BASE}/chat`, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: {
+      "Content-Type": "application/json",
+      // Free ngrok tunnels otherwise return an HTML interstitial to browsers
+      "ngrok-skip-browser-warning": "true",
+    },
     body: JSON.stringify({ message, user_id: userId, conversation_id: conversationId, model_params: modelParams } satisfies ChatMessageRequest),
   });
 

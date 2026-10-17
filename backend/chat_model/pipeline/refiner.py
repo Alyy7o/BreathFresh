@@ -3,15 +3,23 @@ import logging
 from typing import Optional, Dict, Any, List
 from functools import lru_cache
 import os
-from google import genai
 
 logger = logging.getLogger(__name__)
 
+# Prefer new google-genai package; fall back gracefully if missing.
+try:
+    from google import genai  # type: ignore
+except ImportError:  # pragma: no cover
+    genai = None
+    logger.warning("google-genai not installed. Refiner will use fallbacks.")
+
 # Try to initialize the Gemini client
 api_key = os.environ.get("GEMINI_API_KEY")
+client = None
 
 if not api_key or api_key == "your_api_key_here":
     logger.warning("No valid Gemini API key found in environment. Refiner will use fallbacks.")
+elif genai is None:
     client = None
 else:
     try:
