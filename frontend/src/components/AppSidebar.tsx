@@ -60,8 +60,8 @@ export function AppSidebar() {
             isActive={active}
             className={
               active
-                ? "!bg-primary !text-white hover:!bg-primary hover:!text-white"
-                : "!text-slate-700 hover:!bg-primary/10 hover:!text-primary"
+                ? "!rounded-xl !bg-white !font-semibold !text-primary shadow-sm ring-1 ring-border/60 hover:!bg-white"
+                : "!rounded-xl !text-slate-600 hover:!bg-white/70 hover:!text-foreground"
             }
           >
             <NavLink to={item.url} end={item.url === "/dashboard" || item.url === "/admin"}>
@@ -74,50 +74,52 @@ export function AppSidebar() {
     });
 
   return (
-    <Sidebar collapsible="icon" className="bg-slate-50 border-r border-slate-200 text-slate-700">
-      <div className="p-3 border-b border-slate-200">
-        <div className="flex items-center gap-1">
-          <img src={appLogo} alt="BreathFresh Logo" className="w-16 h-16 object-contain" />
+    <Sidebar collapsible="icon" className="border-r border-sidebar-border bg-sidebar text-sidebar-foreground">
+      <div className="border-b border-sidebar-border/80 px-3 py-5">
+        <div className="flex items-center gap-2.5">
+          <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white shadow-sm ring-1 ring-border/60">
+            <img src={appLogo} alt="BreathFresh Logo" className="h-9 w-9 object-contain" />
+          </div>
           {open && (
-            <div>
-              <h2 className="font-bold text-lg text-primary">BreathFresh</h2>
-              {isAdmin && (
-                <p className="text-xs text-muted-foreground">
-                  {isAdminRoute ? "Admin Panel" : "User View"}
-                </p>
-              )}
+            <div className="min-w-0">
+              <h2 className="truncate text-base font-extrabold tracking-tight text-foreground">
+                Breath<span className="text-primary">Fresh</span>
+              </h2>
+              <p className="text-[11px] font-medium text-muted-foreground">
+                {isAdmin && isAdminRoute ? "Admin panel" : "Fresh air, every day"}
+              </p>
             </div>
           )}
         </div>
       </div>
 
-      <SidebarContent className="p-1">
+      <SidebarContent className="px-2 py-3">
         {isAdmin && isAdminRoute ? (
           <SidebarGroup>
-            <SidebarGroupLabel className="text-slate-500 text-xs font-semibold uppercase tracking-wider mb-2">
+            <SidebarGroupLabel className="mb-1 px-2 text-[11px] font-bold uppercase tracking-[0.14em] text-muted-foreground">
               Admin
             </SidebarGroupLabel>
             <SidebarGroupContent>
-              <SidebarMenu>{renderItems(adminItems)}</SidebarMenu>
+              <SidebarMenu className="gap-1">{renderItems(adminItems)}</SidebarMenu>
             </SidebarGroupContent>
           </SidebarGroup>
         ) : (
           <>
             <SidebarGroup>
-              <SidebarGroupLabel className="text-slate-500 text-xs font-semibold uppercase tracking-wider mb-2">
-                Navigation
+              <SidebarGroupLabel className="mb-1 px-2 text-[11px] font-bold uppercase tracking-[0.14em] text-muted-foreground">
+                Navigate
               </SidebarGroupLabel>
               <SidebarGroupContent>
-                <SidebarMenu>{renderItems(userMainItems)}</SidebarMenu>
+                <SidebarMenu className="gap-1">{renderItems(userMainItems)}</SidebarMenu>
               </SidebarGroupContent>
             </SidebarGroup>
 
-            <SidebarGroup className="mt-6">
-              <SidebarGroupLabel className="text-slate-500 text-xs font-semibold uppercase tracking-wider mb-2">
-                Resources
+            <SidebarGroup className="mt-5">
+              <SidebarGroupLabel className="mb-1 px-2 text-[11px] font-bold uppercase tracking-[0.14em] text-muted-foreground">
+                Support
               </SidebarGroupLabel>
               <SidebarGroupContent>
-                <SidebarMenu>{renderItems(userResourceItems)}</SidebarMenu>
+                <SidebarMenu className="gap-1">{renderItems(userResourceItems)}</SidebarMenu>
               </SidebarGroupContent>
             </SidebarGroup>
           </>

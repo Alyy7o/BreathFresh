@@ -199,23 +199,23 @@ const ChatBot = () => {
   };
 
   return (
-    <div className="min-h-[100dvh] flex flex-col bg-slate-50">
+    <div className="flex min-h-[100dvh] flex-col bg-gradient-hero">
       <DashboardHeader dayNumber={1} />
 
       {/* ─── Chat Header ─── */}
-      <div className="bg-white border-b border-slate-200 px-4 py-3 sm:py-4">
-        <div className="max-w-3xl mx-auto flex items-center justify-between">
+      <div className="border-b border-border/70 bg-white/80 px-4 py-3 backdrop-blur-xl sm:py-4">
+        <div className="mx-auto flex max-w-3xl items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="relative">
-              <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-gradient-primary flex items-center justify-center shadow-md">
-                <Sparkles className="w-5 h-5 text-white" />
+              <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-primary shadow-sm sm:h-11 sm:w-11">
+                <Sparkles className="h-5 w-5 text-white" />
               </div>
-              <div className={`absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 rounded-full border-2 border-white ${isOnline ? 'bg-green-400' : 'bg-red-400'}`} />
+              <div className={`absolute -bottom-0.5 -right-0.5 h-3.5 w-3.5 rounded-full border-2 border-white ${isOnline ? "bg-green-400" : "bg-red-400"}`} />
             </div>
             <div>
-              <h1 className="text-base sm:text-lg font-bold text-slate-900 leading-tight">BreathFresh AI</h1>
-              <p className="text-[11px] sm:text-xs text-slate-500">
-                {isOnline ? 'Online • Ready to help' : 'Offline • Limited support'}
+              <h1 className="text-base font-extrabold tracking-tight text-foreground sm:text-lg">BreathFresh AI</h1>
+              <p className="text-[11px] text-muted-foreground sm:text-xs">
+                {isOnline ? "Online • Ready to help" : "Offline • Limited support"}
               </p>
             </div>
           </div>
@@ -250,25 +250,25 @@ const ChatBot = () => {
                   }`}
                 >
                   {/* Avatar */}
-                  <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center shadow-sm ${
-                    message.role === "user" ? "bg-slate-700" : "bg-gradient-primary"
+                  <div className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-xl shadow-sm ${
+                    message.role === "user" ? "bg-foreground" : "bg-primary"
                   }`}>
                     {message.role === "assistant" ? (
-                      <Bot className="w-4 h-4 text-white" />
+                      <Bot className="h-4 w-4 text-white" />
                     ) : (
-                      <User className="w-4 h-4 text-white" />
+                      <User className="h-4 w-4 text-white" />
                     )}
                   </div>
 
                   {/* Bubble */}
-                  <div className={`flex flex-col max-w-[80%] sm:max-w-[75%] ${
+                  <div className={`flex max-w-[80%] flex-col sm:max-w-[75%] ${
                     message.role === "user" ? "items-end" : "items-start"
                   }`}>
                     <div
-                      className={`px-3.5 py-2.5 sm:px-4 sm:py-3 shadow-sm ${
+                      className={`px-3.5 py-2.5 shadow-sm sm:px-4 sm:py-3 ${
                         message.role === "user"
-                          ? "bg-slate-800 text-white rounded-2xl rounded-tr-md"
-                          : "bg-white text-slate-800 border border-slate-200 rounded-2xl rounded-tl-md"
+                          ? "rounded-2xl rounded-tr-md bg-primary text-primary-foreground"
+                          : "rounded-2xl rounded-tl-md border border-border/70 bg-white text-foreground"
                       }`}
                     >
                       <p className="text-[13px] sm:text-sm leading-relaxed whitespace-pre-line">
@@ -287,15 +287,15 @@ const ChatBot = () => {
 
               {/* Typing Indicator */}
               {isLoading && (
-                <div className="flex gap-2.5 animate-fade-in">
-                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-primary flex items-center justify-center shadow-sm">
-                    <Bot className="w-4 h-4 text-white" />
+                <div className="flex animate-fade-in gap-2.5">
+                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-primary shadow-sm">
+                    <Bot className="h-4 w-4 text-white" />
                   </div>
-                  <div className="px-4 py-3 bg-white border border-slate-200 rounded-2xl rounded-tl-md shadow-sm">
-                    <div className="flex gap-1.5 items-center">
-                      <div className="w-2 h-2 rounded-full bg-primary animate-bounce" />
-                      <div className="w-2 h-2 rounded-full bg-primary animate-bounce" style={{ animationDelay: "0.15s" }} />
-                      <div className="w-2 h-2 rounded-full bg-primary animate-bounce" style={{ animationDelay: "0.3s" }} />
+                  <div className="rounded-2xl rounded-tl-md border border-border/70 bg-white px-4 py-3 shadow-sm">
+                    <div className="flex items-center gap-1.5">
+                      <div className="h-2 w-2 animate-bounce rounded-full bg-primary" />
+                      <div className="h-2 w-2 animate-bounce rounded-full bg-primary" style={{ animationDelay: "0.15s" }} />
+                      <div className="h-2 w-2 animate-bounce rounded-full bg-primary" style={{ animationDelay: "0.3s" }} />
                     </div>
                   </div>
                 </div>
@@ -303,14 +303,14 @@ const ChatBot = () => {
 
               {/* Quick prompts — only show at start */}
               {messages.length <= 1 && !isLoading && (
-                <div className="pt-4 space-y-2">
-                  <p className="text-[11px] text-slate-400 font-semibold uppercase tracking-wider px-1">Quick start</p>
+                <div className="space-y-2 pt-4">
+                  <p className="px-1 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">Quick start</p>
                   <div className="flex flex-wrap gap-2">
                     {QUICK_PROMPTS.map((prompt) => (
                       <button
                         key={prompt}
                         onClick={() => handleSend(prompt)}
-                        className="text-xs sm:text-[13px] px-3.5 py-2 bg-white border border-slate-200 rounded-xl text-slate-600 font-medium hover:border-primary hover:text-primary hover:bg-primary/5 transition-all active:scale-95"
+                        className="rounded-xl border border-border/70 bg-white px-3.5 py-2 text-xs font-medium text-foreground transition-all hover:border-primary hover:bg-accent hover:text-primary active:scale-95 sm:text-[13px]"
                       >
                         {prompt}
                       </button>
@@ -336,27 +336,27 @@ const ChatBot = () => {
       )}
 
       {/* ─── Input Area ─── */}
-      <div className="bg-white border-t border-slate-200 px-3 sm:px-4 pt-3 pb-[calc(env(safe-area-inset-bottom,0px)+80px)]">
-        <div className="max-w-3xl mx-auto">
-          <div className="flex gap-2 items-end">
-            <div className="flex-1 relative">
+      <div className="border-t border-border/70 bg-white/90 px-3 pb-[calc(env(safe-area-inset-bottom,0px)+80px)] pt-3 backdrop-blur-xl sm:px-4">
+        <div className="mx-auto max-w-3xl">
+          <div className="flex items-end gap-2">
+            <div className="relative flex-1">
               <textarea
                 ref={textareaRef}
                 value={input}
                 onChange={handleInputChange}
                 onKeyDown={handleKeyPress}
                 placeholder={isOnline ? "Type a message..." : "Offline — limited support"}
-                className="w-full min-h-[44px] max-h-[120px] px-4 py-2.5 text-sm border border-slate-200 rounded-2xl focus:ring-2 focus:ring-primary/30 focus:border-primary resize-none bg-slate-50 shadow-sm transition-all disabled:bg-slate-100 disabled:cursor-not-allowed placeholder:text-slate-400"
+                className="max-h-[120px] min-h-[44px] w-full resize-none rounded-2xl border border-border/70 bg-muted/50 px-4 py-2.5 text-sm shadow-sm transition-all placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-primary/30 disabled:cursor-not-allowed disabled:opacity-60"
                 rows={1}
                 disabled={isLoading || !isOnline}
-                style={{ height: 'auto' }}
+                style={{ height: "auto" }}
               />
             </div>
 
             <Button
               onClick={() => handleSend()}
               disabled={!input.trim() || isLoading || !isOnline}
-              className="bg-gradient-primary hover:brightness-110 text-white rounded-2xl h-[44px] w-[44px] sm:w-auto sm:px-5 shadow-sm transition-all disabled:opacity-40"
+              className="h-[44px] w-[44px] rounded-2xl shadow-sm transition-all disabled:opacity-40 sm:w-auto sm:px-5"
               size="lg"
             >
               <Send className="w-4 h-4" />

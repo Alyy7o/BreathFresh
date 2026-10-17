@@ -309,17 +309,17 @@ const Dashboard = () => {
 
       <div className="p-4 sm:p-6 lg:p-8 space-y-4 sm:space-y-6 max-w-7xl mx-auto">
         {/* Main Progress Circle */}
-        <Card className="shadow-lg animate-scale-in relative">
+        <Card className="animate-scale-in border-border/60 shadow-sm">
           <CardContent className="p-6 sm:p-8">
-            <div className="text-center space-y-4 sm:space-y-6">
+            <div className="space-y-4 text-center sm:space-y-6">
               <div className="relative inline-flex items-center justify-center">
-                <svg className="w-40 h-40 sm:w-48 sm:h-48 lg:w-56 lg:h-56 transform -rotate-90" viewBox="0 0 100 100">
+                <svg className="h-40 w-40 -rotate-90 transform sm:h-48 sm:w-48 lg:h-56 lg:w-56" viewBox="0 0 100 100">
                   <circle
                     cx="50"
                     cy="50"
                     r="45"
                     stroke="currentColor"
-                    strokeWidth="3"
+                    strokeWidth="3.5"
                     fill="none"
                     className="text-muted"
                   />
@@ -327,26 +327,20 @@ const Dashboard = () => {
                     cx="50"
                     cy="50"
                     r="45"
-                    stroke={stats.progressPercentage >= 100 ? "hsl(var(--success))" : "url(#gradient)"}
-                    strokeWidth="3"
+                    stroke={stats.progressPercentage >= 100 ? "hsl(var(--success))" : "hsl(var(--primary))"}
+                    strokeWidth="3.5"
                     fill="none"
                     strokeDasharray={`${(stats.progressPercentage * 282.74) / 100} 282.74`}
                     className="transition-all duration-1000"
                     strokeLinecap="round"
                   />
-                  <defs>
-                    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" stopColor="hsl(var(--secondary))" />
-                      <stop offset="100%" stopColor="hsl(var(--primary))" />
-                    </linearGradient>
-                  </defs>
                 </svg>
                 <div className="absolute text-center">
-                  <div className="flex items-center justify-center gap-1 sm:gap-2 mb-1">
-                    <Calendar className="w-4 h-4 sm:w-6 sm:h-6 text-primary" />
-                    <span className="text-2xl sm:text-3xl font-bold text-primary">{stats.dayNumber}</span>
+                  <div className="mb-1 flex items-center justify-center gap-1 sm:gap-2">
+                    <Calendar className="h-4 w-4 text-primary sm:h-5 sm:w-5" />
+                    <span className="text-2xl font-extrabold tracking-tight text-primary sm:text-3xl">{stats.dayNumber}</span>
                   </div>
-                  <div className="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-secondary bg-clip-text text-transparent">
+                  <div className="text-2xl font-extrabold tracking-tight text-foreground sm:text-3xl lg:text-4xl">
                     {stats.progressPercentage.toFixed(1)}%
                   </div>
                   <div className="text-xs text-muted-foreground mt-1">
@@ -364,8 +358,8 @@ const Dashboard = () => {
                 </div>
               </div>
               <div className="min-h-[50px] sm:min-h-[60px] flex items-center justify-center px-4">
-                <h2 className="text-lg sm:text-xl font-bold animate-fade-in flex items-center gap-2 text-center">
-                  <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-accent flex-shrink-0" />
+                <h2 className="flex animate-fade-in items-center justify-center gap-2 text-center text-base font-semibold tracking-tight text-foreground sm:text-lg">
+                  <Sparkles className="h-4 w-4 shrink-0 text-primary sm:h-5 sm:w-5" />
                   <span className="leading-tight">{motivationalQuotes[currentQuote]}</span>
                 </h2>
               </div>
@@ -389,7 +383,7 @@ const Dashboard = () => {
             icon={Clock}
             value={`${stats.smokeFreeTime.hours}h ${stats.smokeFreeTime.minutes}m ${stats.smokeFreeTime.seconds}s`}
             label="Smoke Free Time"
-            iconColor="text-accent"
+            iconColor="text-primary"
           />
           <StatsCard
             icon={Banknote}
@@ -412,10 +406,10 @@ const Dashboard = () => {
         </div>
 
         {/* Long-term Projections */}
-        <Card className="shadow-md">
+        <Card className="overflow-hidden border-border/60 shadow-sm">
           <CardContent className="p-6">
-            <h3 className="font-semibold mb-4 flex items-center gap-2">
-              <TrendingUp className="w-5 h-5 text-primary" />
+            <h3 className="mb-4 flex items-center gap-2 text-lg font-extrabold tracking-tight">
+              <TrendingUp className="h-5 w-5 text-primary" />
               What will you get in return?
             </h3>
             <div className="text-sm text-muted-foreground mb-2">Money and Life Expectancy</div>

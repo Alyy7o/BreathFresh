@@ -641,58 +641,58 @@ const ProgressTracking = () => {
           </Button>
         </div>
         {/* Statistics Overview */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-          <Card className="shadow-lg border-0 bg-card/50 backdrop-blur-sm animate-scale-in">
+        <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
+          <Card className="animate-scale-in border-border/60 shadow-sm">
             <CardContent className="p-4">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center">
-                  <Clock className="w-5 h-5 text-accent" />
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent">
+                  <Clock className="h-5 w-5 text-primary" />
                 </div>
                 <div>
-                  <p className="text-sm text-muted-foreground font-medium">Days Clean</p>
-                  <p className="text-2xl font-bold text-accent">{stats.totalDays}</p>
+                  <p className="text-xs font-medium text-muted-foreground sm:text-sm">Days Clean</p>
+                  <p className="text-xl font-semibold tracking-tight text-foreground sm:text-2xl">{stats.totalDays}</p>
                 </div>
               </div>
             </CardContent>
           </Card>
 
-          <Card className="shadow-lg border-0 bg-card/50 backdrop-blur-sm animate-scale-in">
+          <Card className="animate-scale-in border-border/60 shadow-sm">
             <CardContent className="p-4">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-success/10 flex items-center justify-center">
-                  <Banknote className="w-5 h-5 text-success" />
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-success/10">
+                  <Banknote className="h-5 w-5 text-success" />
                 </div>
                 <div>
-                  <p className="text-sm text-muted-foreground font-medium">Money Saved</p>
-                  <p className="text-2xl font-bold text-success">Rs.{stats.totalMoney.toFixed(0)}</p>
+                  <p className="text-xs font-medium text-muted-foreground sm:text-sm">Money Saved</p>
+                  <p className="text-xl font-semibold tracking-tight text-foreground sm:text-2xl">Rs.{stats.totalMoney.toFixed(0)}</p>
                 </div>
               </div>
             </CardContent>
           </Card>
 
-          <Card className="shadow-lg border-0 bg-card/50 backdrop-blur-sm animate-scale-in">
+          <Card className="animate-scale-in border-border/60 shadow-sm">
             <CardContent className="p-4">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-warning/10 flex items-center justify-center">
-                  <Target className="w-5 h-5 text-warning" />
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-warning/10">
+                  <Target className="h-5 w-5 text-warning" />
                 </div>
                 <div>
-                  <p className="text-sm text-muted-foreground font-medium">Cigarettes Avoided</p>
-                  <p className="text-2xl font-bold text-warning">{stats.cigarettesAvoided.toLocaleString()}</p>
+                  <p className="text-xs font-medium text-muted-foreground sm:text-sm">Cigarettes Avoided</p>
+                  <p className="text-xl font-semibold tracking-tight text-foreground sm:text-2xl">{stats.cigarettesAvoided.toLocaleString()}</p>
                 </div>
               </div>
             </CardContent>
           </Card>
 
-          <Card className="shadow-lg border-0 bg-card/50 backdrop-blur-sm animate-scale-in">
+          <Card className="animate-scale-in border-border/60 shadow-sm">
             <CardContent className="p-4">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center">
-                  <Heart className="w-5 h-5 text-secondary" />
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-secondary/10">
+                  <Heart className="h-5 w-5 text-secondary" />
                 </div>
                 <div>
-                  <p className="text-sm text-muted-foreground font-medium">Health Score</p>
-                  <p className="text-2xl font-bold text-secondary">{stats.healthScore}%</p>
+                  <p className="text-xs font-medium text-muted-foreground sm:text-sm">Health Score</p>
+                  <p className="text-xl font-semibold tracking-tight text-foreground sm:text-2xl">{stats.healthScore}%</p>
                 </div>
               </div>
             </CardContent>
@@ -717,7 +717,7 @@ const ProgressTracking = () => {
         {/* Charts: outside TabsContent so Radix never hides the panel (value={timeframe} left charts invisible) */}
         <div className="space-y-6 mt-6">
             {/* Enhanced Daily Progress Chart */}
-            <Card className="shadow-lg border-0 bg-card/50 backdrop-blur-sm">
+            <Card className="border-border/60 shadow-sm">
               <CardHeader className="pb-4">
                 <CardTitle className="flex items-center gap-2 text-primary">
                   <Calendar className="w-5 h-5" />
@@ -764,7 +764,7 @@ const ProgressTracking = () => {
             </Card>
 
             {/* Enhanced Money Saved Chart */}
-            <Card className="shadow-lg border-0 bg-card/50 backdrop-blur-sm">
+            <Card className="border-border/60 shadow-sm">
               <CardHeader className="pb-4">
                 <CardTitle className="flex items-center gap-2 text-success">
                   <Banknote className="w-5 h-5" />
@@ -802,7 +802,7 @@ const ProgressTracking = () => {
             </Card>
 
             {/* Enhanced Health Improvements */}
-            <Card className="shadow-lg border-0 bg-card/50 backdrop-blur-sm">
+            <Card className="border-border/60 shadow-sm">
               <CardHeader className="pb-4">
                 <CardTitle className="flex items-center gap-2 text-secondary">
                   <Heart className="w-5 h-5" />
@@ -854,7 +854,7 @@ const ProgressTracking = () => {
             </Card>
 
             {/* Enhanced Achievement Gallery */}
-            <Card className="shadow-lg border-0 bg-card/50 backdrop-blur-sm">
+            <Card className="border-border/60 shadow-sm">
               <CardHeader className="pb-4">
                 <CardTitle className="flex items-center gap-2 text-primary">
                   <Award className="w-5 h-5" />

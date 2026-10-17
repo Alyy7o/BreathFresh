@@ -383,15 +383,15 @@ const QuitPlan = () => {
           /* ─── Empty State ─── */
           <div className="flex flex-col items-center justify-center min-h-[55vh] sm:min-h-[70vh] animate-fade-in px-2 w-full">
             <div className="relative mb-8">
-              <div className="w-28 h-28 rounded-full bg-primary flex items-center justify-center shadow-lg">
-                <Brain className="w-14 h-14 text-white" />
+              <div className="flex h-28 w-28 items-center justify-center rounded-3xl bg-primary shadow-md">
+                <Brain className="h-14 w-14 text-white" />
               </div>
-              <div className="absolute -bottom-1 -right-1 w-10 h-10 rounded-full bg-secondary flex items-center justify-center shadow-md">
-                <Sparkles className="w-5 h-5 text-white" />
+              <div className="absolute -bottom-2 -right-2 flex h-10 w-10 items-center justify-center rounded-2xl bg-secondary shadow-sm ring-4 ring-[hsl(204_45%_98%)]">
+                <Sparkles className="h-5 w-5 text-white" />
               </div>
             </div>
             
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-center mb-3 text-primary">
+            <h2 className="mb-3 text-center text-2xl font-extrabold tracking-tight text-foreground sm:text-3xl">
               Ready for a Strategic Quit?
             </h2>
             <p className="text-muted-foreground text-center max-w-sm mb-8 leading-relaxed px-4">
@@ -453,7 +453,7 @@ const QuitPlan = () => {
 
             {/* ─── Week Complete Banner ─── */}
             {planExpired && (
-              <Card className="overflow-hidden border-0 shadow-lg border-l-4 border-l-secondary animate-fade-in">
+              <Card className="animate-fade-in border-border/60 shadow-sm">
                 <CardContent className="p-4 sm:p-5">
                   <div className="flex flex-col sm:flex-row sm:items-start gap-3">
                     <div className="w-10 h-10 rounded-xl bg-secondary flex items-center justify-center flex-shrink-0">
@@ -741,10 +741,10 @@ const QuitPlan = () => {
 
             {/* ─── Clinical Reasoning ─── */}
             {plan?.clinical_reasoning && (
-              <Card className="glass border-l-4 border-l-accent shadow-md">
-                <CardContent className="p-4 sm:p-5 space-y-2">
-                  <h4 className="text-xs font-bold flex items-center gap-2 text-accent">
-                    <Brain className="w-4 h-4" /> Why This Strategy?
+              <Card className="border-border/60 shadow-sm">
+                <CardContent className="space-y-2 p-4 sm:p-5">
+                  <h4 className="flex items-center gap-2 text-xs font-semibold text-primary">
+                    <Brain className="h-4 w-4" /> Why This Strategy?
                   </h4>
                   <p className="text-sm text-muted-foreground leading-relaxed break-words text-wrap-anywhere">
                     {plan.clinical_reasoning}

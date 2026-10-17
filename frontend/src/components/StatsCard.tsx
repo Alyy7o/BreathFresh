@@ -10,15 +10,17 @@ interface StatsCardProps {
 
 export const StatsCard = ({ icon: Icon, value, label, iconColor = "text-primary" }: StatsCardProps) => {
   return (
-    <Card className="shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 border-0 bg-gradient-to-br from-card to-card/50">
-      <CardContent className="p-4 sm:p-6 text-center space-y-2 sm:space-y-3">
-        <div className="flex justify-center">
-          <div className="p-2 sm:p-3 rounded-full bg-background/50">
-            <Icon className={`w-6 h-6 sm:w-8 sm:h-8 ${iconColor}`} />
+    <Card className="border-border/60 shadow-sm transition-shadow duration-200 hover:shadow-md">
+      <CardContent className="p-4 sm:p-5">
+        <div className="flex items-start gap-3">
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-accent">
+            <Icon className={`h-5 w-5 ${iconColor}`} />
+          </div>
+          <div className="min-w-0 space-y-0.5">
+            <div className="truncate text-lg font-semibold tracking-tight text-foreground sm:text-xl">{value}</div>
+            <div className="text-xs font-medium text-muted-foreground sm:text-sm">{label}</div>
           </div>
         </div>
-        <div className="font-bold text-lg sm:text-xl text-foreground">{value}</div>
-        <div className="text-xs sm:text-sm text-muted-foreground font-medium">{label}</div>
       </CardContent>
     </Card>
   );

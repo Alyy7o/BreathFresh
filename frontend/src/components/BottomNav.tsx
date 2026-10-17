@@ -8,15 +8,15 @@ export const BottomNav = () => {
   const navItems = [
     { icon: Home, label: "Home", path: "/dashboard" },
     { icon: TrendingUp, label: "Progress", path: "/progress" },
-    { icon: Heart, label: "Health", path: "/health" },
+    { icon: Heart, label: "Health", path: "/health-visualization" },
     { icon: Calendar, label: "Plan", path: "/quit-plan" },
     { icon: MessageCircle, label: "Chat", path: "/chat" },
     { icon: User, label: "Profile", path: "/profile" },
   ];
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 bg-card/95 backdrop-blur-sm border-t border-border shadow-lg z-50 sm:hidden">
-      <div className="max-w-7xl mx-auto flex justify-around items-center h-16 px-2 sm:px-4">
+    <div className="fixed bottom-3 left-0 right-0 z-50 px-3 sm:hidden">
+      <div className="mx-auto flex max-w-lg items-center justify-around rounded-2xl border border-border/70 bg-white/90 px-1 py-2 shadow-lg backdrop-blur-xl">
         {navItems.map((item) => {
           const isActive = location.pathname === item.path;
           const Icon = item.icon;
@@ -25,16 +25,12 @@ export const BottomNav = () => {
             <button
               key={item.path}
               onClick={() => navigate(item.path)}
-              className={`flex flex-col items-center justify-center flex-1 h-full transition-all ${
-                isActive ? "text-primary" : "text-muted-foreground hover:text-foreground"
+              className={`flex flex-1 flex-col items-center justify-center rounded-xl px-1 py-1.5 transition-all ${
+                isActive ? "bg-accent text-primary" : "text-muted-foreground"
               }`}
             >
-              <Icon
-                className={`w-5 h-5 sm:w-6 sm:h-6 transition-all ${
-                  isActive ? "scale-110" : "scale-100"
-                }`}
-              />
-              <span className="text-xs mt-1 font-medium hidden sm:block">{item.label}</span>
+              <Icon className={`h-5 w-5 ${isActive ? "scale-105" : ""}`} />
+              <span className="mt-0.5 text-[10px] font-semibold">{item.label}</span>
             </button>
           );
         })}

@@ -252,43 +252,41 @@ const Profile = () => {
           <div className="container mx-auto px-4 py-4 sm:py-6 space-y-4 sm:space-y-6 max-w-4xl">
             {/* Profile Header */}
             <Card className="p-4 sm:p-6">
-              <div className="relative">
-                {/* Settings Button - Positioned absolutely on mobile, inline on desktop */}
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="flex shrink-0 flex-col items-center gap-1.5">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-accent ring-1 ring-border/60 sm:h-20 sm:w-20">
+                    <img src={appLogo} alt="Profile" className="h-12 w-12 object-contain sm:h-16 sm:w-16" />
+                  </div>
+                  <span className="rounded-full bg-accent px-2.5 py-0.5 text-[11px] font-semibold text-[#0483C8]">
+                    {daysSinceQuit} days
+                  </span>
+                </div>
+
+                <div className="min-w-0 flex-1 pt-0.5">
+                  <h1 className="text-xl font-semibold tracking-tight sm:text-2xl">{profile.name || "User"}</h1>
+                  <div className="mt-2 flex flex-col gap-2 text-sm text-muted-foreground sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
+                    <div className="flex min-w-0 items-center gap-1">
+                      <Mail className="h-4 w-4 shrink-0" />
+                      <span className="truncate">{profile.email}</span>
+                    </div>
+                    {profile.quitDate && (
+                      <div className="flex items-center gap-1">
+                        <Calendar className="h-4 w-4 shrink-0" />
+                        <span>Started {profile.quitDate}</span>
+                      </div>
+                    )}
+                  </div>
+                </div>
+
                 <Button
                   variant="outline"
                   size="icon"
                   onClick={() => setActiveTab("settings")}
-                  className="absolute top-0 right-0 sm:relative sm:ml-auto"
+                  className="shrink-0 rounded-xl"
+                  aria-label="Settings"
                 >
                   <Settings className="h-4 w-4" />
                 </Button>
-
-                <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 pt-8 sm:pt-0">
-                  <div className="relative mx-auto sm:mx-0">
-                    <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-primary flex items-center justify-center">
-                      <img src={appLogo} alt="Profile" className="w-12 h-12 sm:w-16 sm:h-16 object-contain" />
-                    </div>
-                    <div className="absolute -bottom-1 -right-1 bg-background border-2 border-primary rounded-full px-2 py-0.5">
-                      <span className="text-xs font-bold text-primary">{daysSinceQuit} days</span>
-                    </div>
-                  </div>
-
-                  <div className="flex-1 text-center sm:text-left">
-                    <h1 className="text-xl sm:text-2xl font-bold">{profile.name || "User"}</h1>
-                    <div className="flex flex-col sm:flex-row items-center sm:items-start gap-2 sm:gap-4 mt-2 text-sm text-muted-foreground">
-                      <div className="flex items-center gap-1">
-                        <Mail className="h-4 w-4" />
-                        <span className="truncate max-w-[200px] sm:max-w-none">{profile.email}</span>
-                      </div>
-                      {profile.quitDate && (
-                        <div className="flex items-center gap-1">
-                          <Calendar className="h-4 w-4" />
-                          <span>Started {profile.quitDate}</span>
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                </div>
               </div>
 
               {/* Quick Stats */}
@@ -302,7 +300,7 @@ const Profile = () => {
                   <p className="text-xs sm:text-sm text-muted-foreground">Money Saved</p>
                 </div>
                 <div className="text-center p-2 sm:p-0">
-                  <p className="text-2xl sm:text-3xl font-bold text-accent">{cigarettesAvoided}</p>
+                  <p className="text-2xl font-bold text-foreground sm:text-3xl">{cigarettesAvoided}</p>
                   <p className="text-xs sm:text-sm text-muted-foreground">Cigarettes Avoided</p>
                 </div>
               </div>

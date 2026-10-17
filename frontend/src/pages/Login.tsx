@@ -68,13 +68,15 @@ const Login = () => {
               className="w-20 h-20 sm:w-24 sm:h-24 object-contain"
             />
           </div>
-          <h1 className="text-3xl sm:text-4xl font-bold mb-2">Welcome Back</h1>
-          <p className="text-muted-foreground text-sm sm:text-base">Continue your smoke-free journey</p>
+          <h1 className="mb-2 text-3xl font-extrabold tracking-tight sm:text-4xl">
+            Welcome to Breath<span className="text-primary">Fresh</span>
+          </h1>
+          <p className="text-sm text-muted-foreground sm:text-base">Continue your smoke-free journey</p>
         </div>
 
-        <Card className="shadow-lg">
+        <Card className="border-border/60 shadow-sm">
           <CardHeader>
-            <CardTitle>Sign In</CardTitle>
+            <CardTitle className="tracking-tight">Sign In</CardTitle>
             <CardDescription>Enter your credentials to access your account</CardDescription>
           </CardHeader>
           <CardContent>
@@ -89,7 +91,7 @@ const Login = () => {
                     placeholder="your@email.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="pl-10"
+                    className="rounded-xl pl-10"
                     required
                   />
                 </div>
@@ -105,17 +107,13 @@ const Login = () => {
                     placeholder="••••••••"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    className="pl-10"
+                    className="rounded-xl pl-10"
                     required
                   />
                 </div>
               </div>
 
-              <Button
-                type="submit"
-                className="w-full bg-gradient-primary hover:opacity-90"
-                disabled={isLoading}
-              >
+              <Button type="submit" className="w-full" disabled={isLoading}>
                 {isLoading ? "Signing in..." : "Sign In"}
               </Button>
             </form>

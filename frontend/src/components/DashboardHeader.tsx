@@ -27,25 +27,22 @@ export const DashboardHeader = ({ dayNumber }: DashboardHeaderProps) => {
       }
 
       const { data: profiles, error } = await supabase
-        .from('profiles')
-        .select('*')
-        .eq('id', user.id);
+        .from("profiles")
+        .select("*")
+        .eq("id", user.id);
 
       if (error) {
-        console.error('Error fetching profile:', error);
+        console.error("Error fetching profile:", error);
         return;
       }
 
       const profileData = profiles?.[0];
-      if (profileData) {
-        // Calculate stats
-        if (profileData.quit_date) {
-          const quitDate = new Date(profileData.quit_date);
-          const now = new Date();
-          const diffTime = Math.abs(now.getTime() - quitDate.getTime());
-          const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
-          setDaysSinceQuit(diffDays);
-        }
+      if (profileData?.quit_date) {
+        const quitDate = new Date(profileData.quit_date);
+        const now = new Date();
+        const diffTime = Math.abs(now.getTime() - quitDate.getTime());
+        const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+        setDaysSinceQuit(diffDays);
       }
     };
 
@@ -53,47 +50,39 @@ export const DashboardHeader = ({ dayNumber }: DashboardHeaderProps) => {
   }, [navigate]);
 
   return (
-    <div className="sticky top-0 z-40 bg-card/95 backdrop-blur-sm border-b border-border shadow-sm">
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-        {/* Logo and Day Number - Responsive Layout */}
-        <div className="flex items-center gap-2 sm:gap-4 min-w-0">
-          {/* Logo + name: mobile/tablet only (hidden on PC where sidebar has brand) */}
-          <div className="flex items-center gap-2 sm:gap-3 shrink-0 lg:hidden">
-            <img
-              src={appLogo}
-              alt="BreathFresh Logo"
-              className="h-10 w-10 object-contain"
-            />
-            <h1 className="hidden sm:block text-lg sm:text-xl font-bold text-primary">BreathFresh</h1>
+    <div className="sticky top-0 z-40 border-b border-border/60 bg-[hsl(204_45%_98%/0.82)] backdrop-blur-xl">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+        <div className="flex min-w-0 items-center gap-3">
+          <div className="flex shrink-0 items-center gap-2 lg:hidden">
+            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-white shadow-sm ring-1 ring-border/60">
+              <img src={appLogo} alt="BreathFresh Logo" className="h-7 w-7 object-contain" />
+            </div>
+            <h1 className="hidden text-base font-extrabold tracking-tight text-foreground sm:block">
+              Breath<span className="text-primary">Fresh</span>
+            </h1>
           </div>
 
-          {/* Day Number - More prominent on mobile */}
-          <div className="flex items-center gap-2 min-w-0">
-            <div className="bg-primary/10 rounded-full px-2.5 py-1.5 sm:p-3 min-w-0">
-              <span className="text-sm sm:text-xl font-bold text-primary truncate block">Day {daysSinceQuit}</span>
-            </div>
+          <div className="bf-chip">
+            Day {daysSinceQuit}
           </div>
         </div>
 
-        {/* Right side: Admin Button, SidebarTrigger and Notifications */}
         <div className="flex items-center gap-2">
           {isAdmin && (
             <Button
               variant="outline"
               size="sm"
-              className="gap-1 hidden sm:flex"
+              className="hidden gap-1 rounded-full border-border/80 sm:flex"
               onClick={() => {
-                const targetPath = window.location.pathname.includes('/admin') ? '/dashboard' : '/admin';
-                const targetUrl = new URL(targetPath, window.location.origin).toString();
-                // Use absolute URL to avoid scope issues in installed PWA
-                window.location.assign(targetUrl);
+                const targetPath = window.location.pathname.includes("/admin") ? "/dashboard" : "/admin";
+                window.location.assign(new URL(targetPath, window.location.origin).toString());
               }}
             >
-              <LayoutDashboard className="w-4 h-4" />
-              {window.location.pathname.includes('/admin') ? 'User Dashboard' : 'Admin Dashboard'}
+              <LayoutDashboard className="h-4 w-4" />
+              {window.location.pathname.includes("/admin") ? "User Dashboard" : "Admin Dashboard"}
             </Button>
           )}
-          <SidebarTrigger className="sm:flex" />
+          <SidebarTrigger className="rounded-full sm:flex" />
           <NotificationBell />
         </div>
       </div>

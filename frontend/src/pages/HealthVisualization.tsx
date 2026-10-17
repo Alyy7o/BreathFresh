@@ -142,7 +142,7 @@ export default function HealthVisualization() {
 
         {/* Hero */}
         <div className="text-center space-y-1 pb-2">
-          <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight bg-gradient-to-r from-primary to-green-500 bg-clip-text text-transparent">
+          <h1 className="text-3xl font-semibold tracking-tight text-[#0483C8] sm:text-4xl">
             Organ Health
           </h1>
           <p className="text-muted-foreground text-base">
@@ -154,10 +154,9 @@ export default function HealthVisualization() {
 
         {/* 3D Organ Viewer */}
         <Card className="p-4 md:p-6 shadow-md border-primary/10">
-          <div className="flex items-center gap-2 mb-5">
-            <div className="w-1 h-5 rounded-full bg-gradient-to-b from-primary to-secondary" />
-            <h2 className="text-lg font-bold text-foreground">Smoker vs Your Recovery</h2>
-            <span className="text-xs text-muted-foreground ml-auto">Drag to rotate</span>
+          <div className="mb-5 flex items-center gap-2">
+            <h2 className="text-lg font-semibold tracking-tight text-foreground">Smoker vs Your Recovery</h2>
+            <span className="ml-auto text-xs text-muted-foreground">Drag to rotate</span>
           </div>
           <OrganViewer recoveryDays={displayDays} smokingIntensity={smokingIntensity} fullRecoveryDays={fullRecoveryDays} />
         </Card>

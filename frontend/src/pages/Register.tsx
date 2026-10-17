@@ -76,13 +76,15 @@ const Register = () => {
               className="w-20 h-20 sm:w-24 sm:h-24 object-contain"
             />
           </div>
-          <h1 className="text-3xl sm:text-4xl font-bold mb-2">Start Your Journey</h1>
-          <p className="text-muted-foreground text-sm sm:text-base">Create an account to begin recovery</p>
+          <h1 className="mb-2 text-3xl font-extrabold tracking-tight sm:text-4xl">
+            Join Breath<span className="text-primary">Fresh</span>
+          </h1>
+          <p className="text-sm text-muted-foreground sm:text-base">Create an account to begin recovery</p>
         </div>
 
-        <Card className="shadow-lg">
+        <Card className="border-border/60 shadow-sm">
           <CardHeader>
-            <CardTitle>Sign Up</CardTitle>
+            <CardTitle className="tracking-tight">Sign Up</CardTitle>
             <CardDescription>Enter your details to create your account</CardDescription>
           </CardHeader>
           <CardContent>
@@ -97,7 +99,7 @@ const Register = () => {
                     placeholder="John Doe"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="pl-10"
+                    className="rounded-xl pl-10"
                     required
                   />
                 </div>
@@ -113,7 +115,7 @@ const Register = () => {
                     placeholder="your@email.com"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="pl-10"
+                    className="rounded-xl pl-10"
                     required
                   />
                 </div>
@@ -129,7 +131,7 @@ const Register = () => {
                     placeholder="••••••••"
                     value={formData.password}
                     onChange={(e) => setFormData({ ...formData, password: e.target.value })}
-                    className="pl-10"
+                    className="rounded-xl pl-10"
                     required
                   />
                 </div>
@@ -145,17 +147,13 @@ const Register = () => {
                     placeholder="••••••••"
                     value={formData.confirmPassword}
                     onChange={(e) => setFormData({ ...formData, confirmPassword: e.target.value })}
-                    className="pl-10"
+                    className="rounded-xl pl-10"
                     required
                   />
                 </div>
               </div>
 
-              <Button
-                type="submit"
-                className="w-full bg-gradient-primary hover:opacity-90"
-                disabled={isLoading}
-              >
+              <Button type="submit" className="w-full" disabled={isLoading}>
                 {isLoading ? "Creating account..." : "Create Account"}
               </Button>
             </form>
