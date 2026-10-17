@@ -1,0 +1,11 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  // BreathFresh frontend — Vite SPA on Workers Static Assets
+  // Supabase stays the auth + DB backend (client talks to it directly).
+  "name": "breathfresh",
+  "compatibility_date": "2026-10-17",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "single-page-application"
+  }
+}

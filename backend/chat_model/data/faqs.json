@@ -1,0 +1,250 @@
+[
+  {
+    "question": "I’m having a strong craving right now, what can I do?",
+    "answer": "Use the 4Ds: Delay for 10 minutes, Drink cold water, Deep breathing (inhale 4s, hold 7s, exhale 8s), Do something else like a short walk or gum."
+  },
+  {
+    "question": "How do I get through a 10-minute craving without smoking?",
+    "answer": "Plan a quick routine: 2 minutes of deep breathing, 3 minutes of stretching, 3 minutes of drinking water, 2 minutes text a friend for support."
+  },
+  {
+    "question": "My hands feel restless; what can I do instead of smoking?",
+    "answer": "Use a stress ball, pen twirling, fidget cube, or simple hand exercises. Chewing gum or a toothpick also helps with oral fixation."
+  },
+  {
+    "question": "I’m stressed and anxious — how can I calm down without a cigarette?",
+    "answer": "Try box breathing (4-4-4-4), progressive muscle relaxation, short mindfulness (notice 5 things you see, 4 you feel, 3 you hear, 2 you smell, 1 you taste)."
+  },
+  {
+    "question": "Coffee makes me want to smoke — tips?",
+    "answer": "Switch to tea or water for 2 weeks, change your coffee spot, hold your cup with the non-dominant hand, and pair coffee with a quick walk instead of a smoke."
+  },
+  {
+    "question": "After meals I crave cigarettes. How do I break that?",
+    "answer": "Stand up immediately after eating, brush teeth, take a 3-minute walk, or do dishes right away to replace the old cue-response loop."
+  },
+  {
+    "question": "I smoked last night and feel like I failed. What now?",
+    "answer": "It’s a slip, not a failure. Identify the trigger, adjust your plan for that moment, remove cigarettes, and restart now. Most successful quitters learn from slips."
+  },
+  {
+    "question": "I slipped after 5 days smoke-free — how do I restart?",
+    "answer": "Set a mini goal: 24 hours smoke-free. Tell someone, remove triggers, and prepare a coping list for your top 3 triggers."
+  },
+  {
+    "question": "Remind me why quitting is worth it right now.",
+    "answer": "Within 24 hours: carbon monoxide drops and oxygen rises. Within weeks: circulation and lung function improve. You save money and regain control over your health."
+  },
+  {
+    "question": "What benefits should I expect after 1 week smoke-free?",
+    "answer": "Better taste and smell, easier breathing, more energy, and lower blood pressure. Cravings usually peak and start to decline after the first week."
+  },
+  {
+    "question": "Give me 5 quick coping strategies for cravings.",
+    "answer": "Water, deep breathing, short walk, text a friend, chew gum. Keep these visible on your phone."
+  },
+  {
+    "question": "What can I do for oral fixation instead of smoking?",
+    "answer": "Sugar-free gum, cinnamon sticks, toothpicks, crunchy veggies, or sipping water through a straw."
+  },
+  {
+    "question": "What happens to my lungs in the first month after quitting?",
+    "answer": "Cilia start recovering, mucus clears more effectively, and inflammation reduces, leading to less coughing and easier breathing."
+  },
+  {
+    "question": "How does nicotine withdrawal affect mood and sleep?",
+    "answer": "Irritability, anxiety, and sleep changes are common in the first 1–3 weeks. They fade as your brain adjusts. Regular routine, light exercise, and breathing help."
+  },
+  {
+    "question": "Are nicotine replacement therapies useful? When should I use them?",
+    "answer": "NRT can reduce cravings and withdrawal. Use patches for baseline and gum/lozenges for spikes. Follow pack guidance or consult a clinician if unsure."
+  },
+  {
+    "question": "Help me create a 3-step plan for cravings at work.",
+    "answer": "Step 1: 2 minutes deep breathing. Step 2: drink water and stand up. Step 3: walk to a non-smoking area and text a friend or note your trigger."
+  }
+,
+  {
+    "question": "Night cravings keep waking me up. What helps?",
+    "answer": "Avoid caffeine after 2pm, light evening exercise, and a consistent wind-down routine. Keep water bedside and use 4-7-8 breathing when cravings strike at night."
+  },
+  {
+    "question": "I’m worried about weight gain after quitting. Tips?",
+    "answer": "Plan healthy snacks, drink water before meals, add short daily walks, and focus on habits first. Weight changes are often small and manageable."
+  },
+  {
+    "question": "How can I handle friends who smoke around me?",
+    "answer": "Tell them you’re quitting, ask to avoid smoking near you, suggest smoke-free meetups, and keep a quick exit plan if cravings spike."
+  },
+  {
+    "question": "What should I do when I’m driving and get an urge?",
+    "answer": "Open windows, chew gum, play a specific ‘urge-busting’ playlist, and practice box breathing at lights. Keep water and mints in the car."
+  },
+  {
+    "question": "How long do nicotine withdrawals last?",
+    "answer": "Most physical symptoms peak in 3–5 days and fade over 2–3 weeks. Psychological cravings can recur but get easier to manage with practice."
+  },
+  {
+    "question": "How do I set a morning routine that reduces cravings?",
+    "answer": "Change cues: drink water first, quick stretch, brush teeth, then a short walk or shower before coffee. Prepare the night before to make it easy."
+  },
+  {
+    "question": "What’s the difference between a lapse and relapse?",
+    "answer": "A lapse is a one-time slip; relapse is returning to regular smoking. Treat a lapse as data, adjust your plan, and restart immediately."
+  },
+  {
+    "question": "How can I calculate money saved by quitting?",
+    "answer": "Multiply packs/week by cost/pack for weekly savings, then scale to monthly and yearly. Track this to boost motivation during tough moments."
+  },
+  {
+    "question": "How do I enable notifications in the app?",
+    "answer": "Open Profile → Settings and toggle notifications on. Allow notifications when your device prompts you."
+  },
+  {
+    "question": "I can’t log in to the app. What should I try?",
+    "answer": "Check email/password, try ‘Forgot password’, ensure internet connection, and update to the latest app version."
+  },
+  {
+    "question": "How do I reset my password?",
+    "answer": "On the Login screen, select ‘Forgot password’ and follow the email link to set a new password."
+  },
+  {
+    "question": "Where can I edit my profile and quit date?",
+    "answer": "Go to Profile → Edit. You can update your quit date, reasons for quitting, and preferences."
+  },
+  {
+    "question": "How do I log a craving in the app?",
+    "answer": "Open Craving Log, select intensity and trigger, add notes if you want, then tap ‘Log Craving’."
+  },
+  {
+    "question": "The chatbot isn’t responding. How can I fix it?",
+    "answer": "Check internet connection, try again, and if it persists, log out and back in. If offline, you’ll see a limited support mode."
+  },
+  {
+    "question": "Does the app work offline?",
+    "answer": "Some features are limited offline. You can read basic tips, but chat and syncing require internet."
+  },
+  {
+    "question": "How is my data protected?",
+    "answer": "We use secure storage and transmission. Your data is only used to personalize your experience and is never sold."
+  },
+  {
+    "question": "How do I contact support?",
+    "answer": "Use the in-app Support option in Settings or email the address listed there. Include screenshots if possible."
+  },
+  {
+    "question": "Can I delete my account and data?",
+    "answer": "Yes. Go to Profile → Settings → Delete Account. This permanently removes your profile and logs."
+  },
+  {
+    "question": "How do I see my day number and progress?",
+    "answer": "Your day counter appears on the dashboard header. Make sure your quit date is set correctly in Profile."
+  },
+  {
+    "question": "How do I manage notifications timing?",
+    "answer": "In Settings, enable notifications and select timing preferences if available. You can also adjust device-level notification settings."
+  },
+  {
+    "question": "What should I do if the app is slow or crashing?",
+    "answer": "Update to the latest version, clear cache or reinstall, and ensure you have a stable internet connection. Contact support if it continues."
+  },
+  { "question": "What are good alternatives to smoking during a craving?", "answer": "Try nicotine replacement therapy like gum or lozenges, drink water, chew sugar-free gum, do deep breathing, or take a short walk. These alternatives help manage the craving trigger, reduce the nicotine urge, and support your quit goal." },
+  { "question": "How do I build a personal quit plan?", "answer": "Pick a quit date, list your top triggers, choose coping strategies for each trigger, prepare nicotine replacement if needed, tell a support person, and plan rewards. A clear plan reduces cravings and helps you manage urges to smoke." },
+  { "question": "What are common triggers I should watch for?", "answer": "Coffee, alcohol, stress, after meals, driving, social events, boredom, and certain places can trigger an urge to smoke. Note your top triggers and pair each trigger with a specific coping strategy to protect your quit attempt." },
+  { "question": "How can I avoid smoking when drinking alcohol?", "answer": "Set a limit, choose smoke-free venues, hold a non-alcoholic drink, stay with supportive friends, and have a plan for urges. Alcohol lowers inhibition and can trigger cravings, so protect your quit with clear boundaries and support." },
+  { "question": "What is the 4Ds technique?", "answer": "Delay for 10 minutes, Drink water, Do something else, and Deep breathing. The 4Ds help interrupt the urge cycle, reduce cravings, and support your quit without smoking or nicotine." },
+  { "question": "Is vaping a safe alternative to smoking?", "answer": "Vaping reduces combustion but still contains nicotine and can maintain the smoking habit and triggers. If you use e-cigarettes as a step-down, make a plan to reduce nicotine and move off nicotine over time with support." },
+  { "question": "How do I handle boredom without cigarettes?", "answer": "Make a short list of quick activities: water, stretch, 5-minute walk, message a friend, small task, or a breathing exercise. Boredom is a common trigger; filling the gap reduces cravings and protects your quit." },
+  { "question": "What should I pack in a quit kit?", "answer": "Water bottle, sugar-free gum, mints, healthy snacks, a stress ball, quit reasons card, and nicotine gum or lozenges if you use NRT. A quit kit helps you face cravings, manage triggers, and support your quit plan anywhere." },
+  { "question": "Can exercise help with cravings?", "answer": "Yes. Even 2–5 minutes of light movement reduces cravings and improves mood. Try brisk walking, stair climbing, or stretching. Exercise interrupts triggers, reduces nicotine urges, and supports your quit and health." },
+  { "question": "How do I manage stress at work without smoking?", "answer": "Schedule micro-breaks, practice 4-7-8 breathing, sip water, walk briefly, and keep a coping list near your desk. Stress is a strong trigger; having a plan reduces cravings and supports quitting." },
+  { "question": "What is nicotine replacement therapy and how do I use it?", "answer": "NRT provides a cleaner form of nicotine without smoke. Use the patch for baseline and gum or lozenges for spikes. Follow instructions and pair with coping strategies to reduce cravings and protect your quit." },
+  { "question": "How do I choose the right NRT dose?", "answer": "Dose depends on cigarettes per day and craving strength. Heavier smokers often start with a higher patch dose and add gum or lozenges as needed. Follow pack guidelines or seek clinical advice to personalize your quit." },
+  { "question": "How long should I use NRT?", "answer": "Many plans last 8–12 weeks, gradually stepping down. Use long enough to reduce cravings and avoid triggers while building new habits. Taper nicotine carefully to maintain your quit and reduce relapse risk." },
+  { "question": "Can mindfulness help with cravings?", "answer": "Yes. Notice the craving as a sensation, label it, breathe slowly, and watch it rise and fall like a wave. Mindfulness reduces the urge to react, helps manage triggers, and supports your smoke-free goal." },
+  { "question": "How can I handle morning triggers?", "answer": "Change the routine: drink water first, stretch, brush teeth, and delay coffee for 10 minutes. Prepare the night before. Replacing old triggers lowers cravings and keeps your quit plan strong." },
+  { "question": "What should I do when a friend offers a cigarette?", "answer": "Say a clear no, share your quit goal, and ask for support. Hold a drink or gum to keep hands busy. Prepare a polite script so social triggers don’t break your smoke-free plan." },
+  { "question": "How do I deal with withdrawal irritability?", "answer": "Irritability peaks in the first week. Use breathing, movement, water, and a short break. Remind yourself it’s temporary and part of healing. Support and coping strategies reduce cravings and help you stay quit." },
+  { "question": "What helps with headaches during withdrawal?", "answer": "Hydrate, rest your eyes, gentle movement, and over-the-counter pain relief if appropriate. Headaches improve as nicotine leaves your system. Keeping to your quit plan reduces triggers and urge cycles." },
+  { "question": "How can I sleep better while quitting?", "answer": "Keep a consistent schedule, avoid caffeine late, do a short wind-down, and use breathing exercises. Short-term sleep changes are common during nicotine withdrawal and improve as your brain adapts." },
+  { "question": "How do I handle cravings while traveling?", "answer": "Plan smoke-free breaks, pack gum and water, use breathing at stops, and choose smoke-free lodging. Travel changes routines and can trigger cravings; a plan protects your quit from urges." },
+  { "question": "How do I say no to cigarettes at parties?", "answer": "Decide ahead of time, bring a non-alcoholic drink, stay with supportive people, and step outside for fresh air when triggered. Social triggers are powerful; preparation supports your quit and health." },
+  { "question": "What should I track during my quit?", "answer": "Track smoke-free days, triggers, coping strategies used, and money saved. Seeing progress boosts motivation and helps you learn which strategies reduce cravings and protect your quit plan." },
+  { "question": "How do I prevent relapse after a lapse?", "answer": "Treat a lapse as data. Identify the trigger, adjust your plan, remove cigarettes, and tell a support person. Restart immediately. Most successful quitters learn and strengthen their quit after slips." },
+  { "question": "How can I use social support effectively?", "answer": "Tell someone your quit date, ask for specific help during cravings, and celebrate milestones together. Support reduces relapse risk, eases triggers, and keeps your quit goal visible and strong." },
+  { "question": "Does cutting down first help?", "answer": "Gradual reduction can help some people, especially with NRT. Set a clear target date to quit completely, avoid triggers, and use coping strategies to handle cravings during the step-down period." },
+  { "question": "How do I quit if my partner smokes?", "answer": "Agree on smoke-free zones, avoid offering cigarettes, and align on coping strategies. Ask for support during cravings. Protect your quit plan from second-hand triggers and urge cues at home." },
+  { "question": "What should I do if I find a cigarette at home?", "answer": "Dispose of it immediately, drink water, breathe, and do a quick activity. Seeing cigarettes is a strong trigger. Removing them protects your quit and reduces the chance of an urge becoming a slip." },
+  { "question": "How do I manage weight while quitting?", "answer": "Plan healthy snacks, drink water, add short daily walks, and focus on habits first. Avoid strict diets early; prioritize staying smoke-free. Small weight changes often stabilize with routine." },
+  { "question": "What is urge surfing?", "answer": "Urge surfing is noticing a craving, breathing through it, and watching it peak and fade like a wave. It reduces reactivity to triggers, lowers the urge to smoke, and supports your quit." },
+  { "question": "Can breathing alone stop a craving?", "answer": "Breathing doesn’t remove nicotine, but it calms your stress response and shortens cravings. Combine deep breathing with water or a short walk to reduce triggers and manage urges effectively." },
+  { "question": "How do I handle coffee triggers without quitting coffee?", "answer": "Change the cup, seat, or hand you hold it with. Pair coffee with water and a quick walk. Adjusting cues reduces cravings linked to smoking triggers while keeping your routine." },
+  { "question": "What should I do if I dream about smoking?", "answer": "Smoking dreams are common during withdrawal. Use them as a reminder to strengthen your plan for triggers. The urge will pass. Keep your quit reasons visible and ready." },
+  { "question": "How do I stay quit during stressful news or events?", "answer": "Limit exposure, schedule short check-ins, use breathing, move your body, and talk to someone supportive. Stress is a trigger; a plan protects your quit from strong urges." },
+  { "question": "Are there apps or tools that help with quitting?", "answer": "Yes. Use craving logs, reminders, coping libraries, and progress trackers. These tools reinforce strategies, reduce triggers, and keep your quit goal active each day." },
+  { "question": "How do I reward myself without spending much?", "answer": "Use free or low-cost rewards: time outdoors, favorite music, a relaxing bath, or a movie night. Rewards reinforce smoke-free progress and help you handle cravings and triggers." },
+  { "question": "What should I do during a long meeting craving?", "answer": "Slow, silent breathing, sip water, and a subtle hand stretch can help. After the meeting, take a brief walk. Meetings can trigger urges; small actions keep your quit safe." },
+  { "question": "How do I handle family gatherings with smokers?", "answer": "Decide on smoke-free zones, bring gum, stand with non-smokers, and take fresh air breaks. Prepare a supportive buddy. Family events can trigger cravings; a plan keeps you quit." },
+  { "question": "Can I quit without NRT or meds?", "answer": "Yes, many do with planning and support. Use coping strategies, remove triggers, and build a strong support network. If cravings are strong, consider adding NRT to protect your quit." },
+  { "question": "Should I avoid all triggers?", "answer": "Early on, yes—avoid high-risk triggers like alcohol and smoking areas. Over time, practice coping strategies to handle them. Reducing trigger exposure protects your quit while habits change." },
+  { "question": "How do I handle a craving that won’t go away?", "answer": "Combine strategies: water, 4-7-8 breathing, a 5-minute walk, and a snack. Change location if possible. Most urges peak and fade; staying engaged protects your quit." },
+  { "question": "What’s a simple daily quit routine?", "answer": "Morning: water, stretch, brush teeth. Midday: short walk. Evening: wind-down and breathing. Track progress. Consistent routines reduce triggers and support your smoke-free plan." },
+  { "question": "How do I quit if I’ve failed before?", "answer": "Review what triggered past slips, build stronger plans for those moments, and use support or NRT. Each attempt teaches you how to reduce cravings and protect your quit." },
+  { "question": "Can meditation reduce smoking urges?", "answer": "Yes. Short mindfulness sessions help you notice cravings without acting. Combine with breathing and a brief activity for best results against triggers and nicotine urges." },
+  { "question": "How do I manage anxiety without smoking?", "answer": "Use breathing, grounding (5-4-3-2-1), movement, and talk to a friend. If anxiety persists, seek professional support. Smoking relief is temporary; healthier tools support your quit." },
+  { "question": "What’s a good snack during cravings?", "answer": "Crunchy veggies, nuts, or fruit. Avoid high sugar spikes. Snacks keep your mouth busy, reduce triggers, and support your quit without feeding the urge to smoke." },
+  { "question": "How do I stay motivated long-term?", "answer": "Track money saved, health gains, and milestones. Revisit your reasons to quit and share progress with supporters. Seeing benefits reduces relapse risk and maintains your quit." },
+  { "question": "How can I reduce second-hand triggers at home?", "answer": "Create smoke-free rules, remove ashtrays, air out rooms, and use scent cues like mint or citrus. Reducing cues weakens triggers and supports a lasting smoke-free home." },
+  { "question": "What do I do when I wake up craving nicotine?", "answer": "Drink water, deep breathe for one minute, stretch, and move to a different room. Changing cues reduces triggers and helps the urge to smoke pass quickly." },
+  { "question": "Can I use both patch and gum?", "answer": "Yes. Many quit plans use a patch for steady nicotine and gum or lozenges for spikes. Follow instructions to safely reduce cravings and protect your smoke-free plan." },
+  { "question": "How do I handle cravings during exams or study?", "answer": "Use time blocks with brief movement breaks, hydrate, and breathe slowly before starting. High-focus periods can trigger urges; small routines protect your quit." },
+  { "question": "What’s a quick grounding exercise during urges?", "answer": "Notice 5 things you see, 4 feel, 3 hear, 2 smell, 1 taste. This reduces stress-triggered cravings and helps you ride out nicotine urges without smoking." },
+  { "question": "How do I set boundaries with smoking coworkers?", "answer": "Let them know you’ve quit and avoid smoking areas during breaks. Suggest walking or water break alternatives. Boundaries reduce triggers and protect your quit plan." },
+  { "question": "Should I change my commute to avoid triggers?", "answer": "If your old route was tied to smoking, try a slight change: new music, timing, or path. Small adjustments reduce cue-triggered cravings and keep you smoke-free." },
+  { "question": "What’s a relapse prevention plan?", "answer": "List high-risk situations, pick 2 strategies for each, set support contacts, and plan rewards. A prevention plan reduces cravings’ impact and protects your quit long-term." },
+  { "question": "How do I celebrate milestones without smoking?", "answer": "Choose non-smoking rewards like time off, a small gift, or an activity. Celebrations reinforce your smoke-free identity and reduce the pull of old triggers." },
+  { "question": "How can I manage triggers at home alone?", "answer": "Change routines, keep a visible coping list, prepare a quit kit, and schedule call check-ins. Structure reduces cravings and protects your quit when alone." },
+  { "question": "What’s a 1-minute craving routine?", "answer": "Water, 10 deep breaths, walk to a different spot. Quick routines interrupt triggers, reduce nicotine urges, and keep your quit on track." },
+  { "question": "How do I deal with anger without smoking?", "answer": "Pause, breathe, move briefly, and name the feeling. Smoking doesn’t solve the cause. Using coping skills during anger reduces cravings and protects your quit." },
+  { "question": "Can cold water reduce cravings?", "answer": "Yes. Cold water changes body cues and gives your hands and mouth something to do. It helps break trigger associations with smoking and reduces the urge." },
+  { "question": "What should I prepare for weekends?", "answer": "Plan smoke-free activities, avoid high-trigger places, and keep gum and water handy. Weekends change routines and can trigger cravings; a plan helps you stay quit." },
+  { "question": "How do I handle long drives without smoking?", "answer": "Schedule stops, keep snacks and water, use music changes, and practice breathing at lights. Driving triggers are common; planned alternatives protect your quit." },
+  { "question": "How can I use journaling to quit?", "answer": "Write your top reasons to quit, daily triggers, and what worked. Journaling builds insight, strengthens coping strategies, and reduces relapse from repeated triggers." },
+  { "question": "What if my cravings are strongest after lunch?", "answer": "Stand up immediately, brush teeth, take a short walk, and sip water. Changing the post-meal routine reduces smoking triggers and protects your quit plan." },
+  { "question": "Does spicy food trigger smoking urges?", "answer": "For some, yes. If spicy meals trigger cravings, pair them with water, a walk, or gum afterward. Adjust cues to reduce triggers during your quit." },
+  { "question": "How do I prepare for holidays while quitting?", "answer": "Plan smoke-free activities, set boundaries with smokers, and keep coping tools visible. Holidays bring triggers; preparation reduces cravings and supports your quit." },
+  { "question": "Can I use apps to remind me of coping steps?", "answer": "Yes. Set reminders for breathing, water, and movement. Notifications keep strategies top-of-mind, reduce triggers, and support your smoke-free routine." },
+  { "question": "What’s a good evening routine for quitting?", "answer": "Light movement, low screens, warm shower, and 4-7-8 breathing. A calm routine reduces stress triggers and helps nicotine withdrawal symptoms pass more easily." },
+  { "question": "How do I handle triggers in public transport?", "answer": "Focus on breathing, hydrate, listen to music, and avoid standing near smokers. Prepare an exit plan at stops. Small choices reduce cravings and protect your quit." },
+  { "question": "What if I feel sad during quitting?", "answer": "Mood shifts can occur with nicotine withdrawal. Use support, movement, and sunlight exposure. If sadness persists, talk to a professional while maintaining your quit plan." },
+  { "question": "How do I avoid ‘just one puff’?", "answer": "Remind yourself that one puff reactivates triggers and urges. Use the 4Ds and contact support. Protect your quit by treating cravings as temporary waves." },
+  { "question": "Can deep breathing really help?", "answer": "Yes. Deep breathing activates the relaxation response, reduces stress triggers, and shortens cravings. Pair it with water or a brief walk for stronger effect." },
+  { "question": "How can I read cravings on a scale?", "answer": "Rate craving intensity 1–10. If above 6, use two strategies together (breathing + walk). Tracking intensity helps you act early to protect your quit." },
+  { "question": "What should I do if my hands need something to do?", "answer": "Use a stress ball, pen, fidget tool, or keys. Hand busywork reduces triggers linked to smoking rituals and supports your smoke-free habit." },
+  { "question": "How do I handle peer pressure kindly?", "answer": "Say no clearly, share your quit reason, and suggest a different activity. Prepare polite scripts. Kind boundaries reduce triggers and support your quit." },
+  { "question": "Can I pair coffee with a new habit to avoid smoking?", "answer": "Yes. Pair coffee with a 3-minute walk or water. Changing cues breaks the coffee-smoking trigger and reduces cravings during your quit." },
+  { "question": "What are evidence-based ways to quit?", "answer": "Behavioral support, nicotine replacement therapy, and medications like varenicline or bupropion (if appropriate) have strong evidence. Combining tools reduces cravings and relapse." },
+  { "question": "How do I manage triggers at home in the evening?", "answer": "Dim lights, hydrate, light movement, and prepare a short relaxation routine. Evening cues can trigger smoking; calm structure protects your quit." },
+  { "question": "What’s a quick way to remember my reasons to quit?", "answer": "Write 3 reasons on a card or your phone lock screen. Read them during cravings. Visible reasons reduce triggers’ power and keep your quit front-of-mind." },
+  { "question": "How do I use a support buddy?", "answer": "Agree on check-in times, message during strong urges, and celebrate milestones. Human support reduces relapse risk and helps manage triggers in real time." },
+  { "question": "Can I practice refusing cigarettes in advance?", "answer": "Yes. Rehearse a simple ‘No thanks, I don’t smoke’ with steady voice. Mental practice makes it easier to protect your quit in social triggers." },
+  { "question": "How do I use water as a coping tool?", "answer": "Sip slowly, notice the temperature, and breathe between sips. Water helps with oral fixation, interrupts triggers, and supports your smoke-free plan." },
+  { "question": "What’s a plan for high-stress days?", "answer": "Set a reminder to breathe each hour, drink water, take brief movement breaks, and text a support person. High stress fuels triggers; a plan keeps you quit." },
+  { "question": "What if I miss the feeling of smoke breaks?", "answer": "Replace with short fresh-air breaks, stretching, or quick walks. Keep the break, change the behavior. This reduces cravings and preserves your quit." },
+  { "question": "How do I enjoy social time without smoking?", "answer": "Hold a drink, keep hands busy, stay with non-smokers, and step away if triggered. Plan a wrap-up activity to celebrate being smoke-free with friends." },
+  { "question": "What if my job is very physical and I used to smoke on breaks?", "answer": "Use water, deep breathing, and a snack on breaks. Keep gum available. Changing break routines reduces triggers and keeps your quit safe at work." },
+  { "question": "How do I stop thinking about smoking all day?", "answer": "Expect intrusive thoughts early on. Gently redirect to a task, breathe, and use short activities. Over time, triggers weaken and thoughts about smoking fade." },
+  { "question": "Can I combine multiple coping strategies?", "answer": "Yes. Combining water, breathing, movement, and a quick text is powerful. Multiple strategies reduce strong cravings and protect your quit from triggers." },
+  { "question": "How do I plan for festivals or concerts?", "answer": "Choose smoke-free areas, keep gum and water, attend with supportive friends, and plan an exit route if triggered. High-energy events can trigger cravings; prepare." },
+  { "question": "What if I feel embarrassed to ask for support?", "answer": "Many people need support to quit. Choose one trusted person and share your plan. Support reduces cravings’ impact and helps you handle triggers kindly." },
+  { "question": "How can I practice being a non-smoker?", "answer": "Use identity statements: ‘I don’t smoke’. Visualize smoke-free days and celebrate wins. Identity shifts reduce triggers’ pull and strengthen your quit plan." },
+  { "question": "How do I set a quit date that works?", "answer": "Pick a realistic date with lower stress, prepare a quit kit, remove cigarettes, and tell one supporter. A prepared date reduces cravings and supports success." },
+  { "question": "What if my family doesn’t support my quit?", "answer": "Find support elsewhere: friends, groups, or a counselor. Use boundaries at home to reduce triggers. Protecting your quit is a personal health priority." },
+  { "question": "How do I plan mornings on weekends?", "answer": "Keep a simple routine: water, short walk, and a healthy breakfast. Weekends shift cues; planning reduces triggers and helps you stay smoke-free." },
+  { "question": "How do I make urges less scary?", "answer": "Rate the urge, name it, breathe, and watch it pass like a wave. Urges peak and fade. This mindset reduces trigger power and strengthens your quit." },
+  { "question": "What should I do with saved cigarette money?", "answer": "Plan small weekly rewards and a bigger monthly treat. Seeing savings supports motivation, reduces relapse risk, and keeps your quit meaningful." },
+  { "question": "How do I reduce morning nicotine spikes?", "answer": "Delay the first coffee, hydrate, and use a small movement routine. Adjust early cues to reduce cravings and protect your quit from strong triggers." },
+  { "question": "Can I create a craving checklist?", "answer": "Yes: water, 10 breaths, walk, gum, text someone, note the trigger, reward. A checklist reduces decision fatigue and helps you handle urges quickly." },
+  { "question": "How do I handle setbacks at work without smoking?", "answer": "Pause and breathe, write down the next small step, sip water, and move briefly. Replacing the old response reduces triggers and keeps your quit intact." },
+  { "question": "What’s the best way to ask friends for support?", "answer": "Be specific: ‘If I text CRAVE, remind me to breathe and walk’. Clear requests reduce triggers’ impact and make support timely and effective." }
+]
