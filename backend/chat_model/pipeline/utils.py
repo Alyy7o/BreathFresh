@@ -96,16 +96,6 @@ class VectorStore:
             logger.error("Vector store files not found. Run data ingestion first.")
             return False
 
-    def reload(self) -> bool:
-        self.index = None
-        self.texts = []
-        self.metadata = []
-        self.embedding_model = self.embedding_model
-        self.keyword_vectorizer = None
-        self.keyword_vocabulary = []
-        self._is_loaded = False
-        return self.load()
-
         try:
             self.index = faiss.read_index(str(VECTOR_STORE_PATH))
             with open(TEXT_CHUNKS_PATH, "rb") as f:
@@ -124,6 +114,15 @@ class VectorStore:
         except Exception as e:
             logger.error(f"Failed to load vector store: {e}", exc_info=True)
             return False
+
+    def reload(self) -> bool:
+        self.index = None
+        self.texts = []
+        self.metadata = []
+        self.keyword_vectorizer = None
+        self.keyword_vocabulary = []
+        self._is_loaded = False
+        return self.load()
 
     def _load_embedding_model(self) -> SentenceTransformer:
         """Load embedding model with caching - ULTRA FAST VERSION."""

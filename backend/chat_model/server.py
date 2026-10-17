@@ -7,11 +7,10 @@ from pydantic import BaseModel
 from dotenv import load_dotenv
 
 load_dotenv()
-from pipeline.chatbot import get_chatbot
-from pipeline.utils import get_vector_store
-from pipeline.plan_generator import generate_7day_plan
 
- 
+from pipeline.chatbot import get_chatbot
+from pipeline.plan_generator import generate_7day_plan
+from pipeline.groq_client import get_groq_client
 
 
 class ChatMessageRequest(BaseModel):
@@ -33,12 +32,8 @@ class ChatMessageResponse(BaseModel):
     error: Optional[str] = None
 
 
- 
+app = FastAPI(title="BreathFresh Chat API", version="2.0.0")
 
-
-app = FastAPI(title="BreathFresh Chat API", version="1.0.0")
-
-# Enable permissive CORS for development; tighten in production
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -54,6 +49,8 @@ def api_status() -> Dict[str, Any]:
     stats = chatbot.get_stats()
     return {
         "status": "ok",
+        "provider": "groq",
+        "groq_configured": get_groq_client() is not None,
         "stats": stats,
     }
 
@@ -66,7 +63,6 @@ def chat(req: ChatMessageRequest) -> ChatMessageResponse:
     chatbot = get_chatbot()
     result = chatbot.process_query(req.message, model_params=req.model_params)
 
-    # Ensure keys are present and types are JSON-serializable
     return ChatMessageResponse(
         success=bool(result.get("success", True)),
         response=str(result.get("response", "")),
@@ -82,30 +78,12 @@ def chat(req: ChatMessageRequest) -> ChatMessageResponse:
 
 @app.post("/api/generate-plan")
 def generate_plan(req: Dict[str, Any]) -> Dict[str, Any]:
-    """
-    Generate a 7-day quit plan based on user baseline and preference.
-    """
     try:
-        result = generate_7day_plan(req)
-        return result
+        return generate_7day_plan(req)
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
 
-@app.post("/api/reload_vectors")
-def reload_vectors() -> Dict[str, Any]:
-    store = get_vector_store()
-    ok = store.reload()
-    return {"reloaded": ok}
-
-
-# Optional: simple health check
 @app.get("/api/health")
 def health() -> Dict[str, str]:
-    return {"status": "healthy"}
-
-
-# Removed SQLite init; persistence is handled by Supabase via the frontend
-
-
-# Removed /api/chats endpoint; chat history is queried directly from Supabase
+    return {"status": "healthy", "provider": "groq"}
