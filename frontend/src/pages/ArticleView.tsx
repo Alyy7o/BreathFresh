@@ -6,7 +6,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
-import { ArrowLeft, Clock, Star, Bookmark, BookmarkCheck } from "lucide-react";
+import { ArrowLeft, Clock, Star, Bookmark, BookmarkCheck, ExternalLink, Video } from "lucide-react";
 import PageLoader from "@/components/PageLoader";
 import { toast } from "sonner";
 
@@ -20,6 +20,7 @@ interface Resource {
     read_time?: number;
     rating?: number;
     tags?: string[];
+    video_url?: string | null;
     created_at: string;
 }
 
@@ -184,6 +185,22 @@ export default function ArticleView() {
                     </div>
                 </div>
 
+                {resource.type === "video" && resource.video_url && (
+                    <Card className="p-6 sm:p-8 bg-card border-none shadow-sm space-y-4">
+                        <p className="text-muted-foreground">
+                            This resource opens on YouTube so you can watch the full video.
+                        </p>
+                        <Button
+                            className="bg-gradient-primary"
+                            onClick={() => window.open(resource.video_url!, "_blank", "noopener,noreferrer")}
+                        >
+                            <Video className="h-4 w-4 mr-2" />
+                            Watch on YouTube
+                            <ExternalLink className="h-4 w-4 ml-2" />
+                        </Button>
+                    </Card>
+                )}
+
                 {/* Article Content */}
                 <Card className="p-6 sm:p-8 bg-card border-none shadow-sm text-foreground/90">
                     <div className="prose prose-slate dark:prose-invert max-w-none">
@@ -192,7 +209,7 @@ export default function ArticleView() {
                                 className="whitespace-pre-wrap leading-relaxed text-base"
                                 dangerouslySetInnerHTML={{ __html: resource.content }}
                             />
-                        ) : (
+                        ) : resource.type === "video" && resource.video_url ? null : (
                             <div className="text-center py-12 text-muted-foreground italic">
                                 Content for this article is not available.
                             </div>

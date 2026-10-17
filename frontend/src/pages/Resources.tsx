@@ -180,10 +180,25 @@ export default function Resources() {
           <Button
             variant="default"
             className="flex-1 bg-gradient-primary"
-            onClick={() => navigate(`/resources/${resource.id}`)}
+            onClick={() => {
+              if (resource.type === "video" && resource.video_url) {
+                window.open(resource.video_url, "_blank", "noopener,noreferrer");
+                return;
+              }
+              navigate(`/resources/${resource.id}`);
+            }}
           >
-            <BookOpen className="h-4 w-4 mr-2" />
-            Read
+            {resource.type === "video" ? (
+              <>
+                <Video className="h-4 w-4 mr-2" />
+                Watch
+              </>
+            ) : (
+              <>
+                <BookOpen className="h-4 w-4 mr-2" />
+                Read
+              </>
+            )}
           </Button>
           <Button
             variant="outline"
